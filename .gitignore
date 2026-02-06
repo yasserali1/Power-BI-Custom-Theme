@@ -1,0 +1,26 @@
+# Power BI
+*.pbip
+*.pbixproj
+*.pbit.backup
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+.idea/
+
+# IDE
+*.swp
+*.swo
+*~
+
+# Backups
+*.bak
+*_backup.*
+
+# Temp files
+*.tmp
+.temp/

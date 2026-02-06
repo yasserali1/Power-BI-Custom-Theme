@@ -1,0 +1,2367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Power_BI_Theme_Guide.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #d7a767; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="power-bi-custom-theme--complete-guide">Power BI Custom Theme — Complete Guide</h1>
+<div style="margin:12px 0;display:flex;gap:8px;flex-wrap:wrap;">
+  <button type="button" onclick="document.querySelectorAll('details.collapsible-section').forEach(d => d.open = true)" style="background:#F3F3F3;color:#595B69;border:0;border-radius:5px;padding:6px 12px;font-weight:bold;cursor:pointer;border-bottom:2px solid #1C2632;">Expand All</button>
+  <button type="button" onclick="document.querySelectorAll('details.collapsible-section').forEach(d => d.open = false)" style="background:#F3F3F3;color:#595B69;border:0;border-radius:5px;padding:6px 12px;font-weight:bold;cursor:pointer;border-bottom:2px solid #1C2632;">Collapse All</button>
+</div>
+<details open class="collapsible-section">
+<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="table-of-contents">Table of Contents</span></summary>
+<ol>
+<li><a href="#overview--how-to-apply">Overview &amp; How to Apply</a></li>
+<li><a href="#theme-properties">Theme Properties</a>
+<ul>
+<li><a href="#basic-information">2.1 Basic Information</a></li>
+<li><a href="#custom-icons">2.2 Custom Icons</a></li>
+</ul>
+</li>
+<li><a href="#color-palette">Color Palette</a>
+<ul>
+<li><a href="#theme-colors">3.1 Theme Colors</a></li>
+<li><a href="#semantic-status-colors">3.2 Semantic Status Colors</a></li>
+<li><a href="#scale--range-colors">3.3 Scale &amp; Range Colors</a></li>
+<li><a href="#background--foreground-colors">3.4 Background &amp; Foreground Colors</a></li>
+</ul>
+</li>
+<li><a href="#typography--text-classes">Typography &amp; Text Classes</a>
+<ul>
+<li><a href="#font-face">4.1 Font Face</a></li>
+<li><a href="#text-classes-reference">4.2 Text Classes Reference</a></li>
+</ul>
+</li>
+<li><a href="#theme-file-structure">Theme File Structure</a>
+<ul>
+<li><a href="#summary-hierarchy-overview">5.1 Summary Hierarchy Overview</a></li>
+<li><a href="#complete-hierarchy-diagram">5.2 Complete Hierarchy Diagram</a></li>
+<li><a href="#level-1-global-theme-settings">5.3 Level 1: Global Theme Settings</a></li>
+<li><a href="#level-2-general-visual-settings">5.4 Level 2: General Visual Settings</a></li>
+<li><a href="#level-3-visual-specific-settings">5.5 Level 3: Visual-Specific Settings</a></li>
+<li><a href="#level-4-visual-preset-styles">5.6 Level 4: Visual Preset Styles</a></li>
+<li><a href="#settings-application-order-priority">5.7 Settings Application Order</a></li>
+</ul>
+</li>
+<li><a href="#visual-name-reference">Visual Name Reference</a></li>
+<li><a href="#how-to-customize-this-theme">How to Customize This Theme</a>
+<ul>
+<li><a href="#what-youll-need">7.1 What You'll Need</a></li>
+<li><a href="#setting-up-vs-code">7.2 Setting Up VS Code for Autocomplete</a></li>
+<li><a href="#method-1-schema--editor-autocomplete">7.3 Method 1: Schema + Editor Autocomplete</a></li>
+<li><a href="#method-2-ai-assisted-with-schema">7.4 Method 2: AI-Assisted with Schema</a></li>
+<li><a href="#tips--troubleshooting">7.5 Tips &amp; Troubleshooting</a></li>
+</ul>
+</li>
+<li><a href="#real-examples-by-visual-type">Real Examples by Visual Type</a>
+<ul>
+<li><a href="#example-card">8.1 Card — Value Font Size &amp; Category Label</a></li>
+<li><a href="#example-table">8.2 Table — Headers, Values &amp; Totals</a></li>
+<li><a href="#example-bar-chart">8.3 Bar Chart — Data Labels &amp; Legend</a></li>
+<li><a href="#example-line-chart">8.4 Line Chart — Line Styles &amp; Markers</a></li>
+<li><a href="#example-all-visuals">8.5 All Visuals — Default Title, Border &amp; Padding</a></li>
+</ul>
+</li>
+<li><a href="#quick-reference--notes">Quick Reference &amp; Notes</a></li>
+<li><a href="#version--references">Version &amp; References</a></li>
+</ol>
+<hr>
+</details>
+<details open class="collapsible-section">
+<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="overview--how-to-apply">1. Overview & How to Apply</span></summary>
+<div style="height:1px;background:#e5e7eb;margin:10px 0 18px;"></div>
+<p>The <strong>Custom_Theme_Styles.json</strong> is a comprehensive Power BI theme file designed to provide a cohesive, professional visual experience across all Power BI reports and dashboards. This theme defines colors, typography, and visual styling for all 40+ Power BI visualization types.</p>
+<p>The theme follows a hierarchical 4-level structure that ensures consistency while allowing visual customization at multiple levels.</p>
+<h4 id="how-to-apply-this-theme">How to Apply This Theme</h4>
+<ol>
+<li>Open your Power BI report in <strong>Power BI Desktop</strong></li>
+<li>Go to <strong>View</strong> → <strong>Themes</strong> → <strong>Browse for themes</strong></li>
+<li>Select <strong>Custom_Theme_Styles.json</strong> and click <strong>Open</strong></li>
+<li>The theme is applied immediately to all visuals in the report</li>
+</ol>
+<blockquote>
+<p><strong>Tip</strong>: To make this the default for new reports, apply it once and save the report as a template (.pbit). Any report created from that template will inherit the theme automatically.</p>
+<p><strong>To update an already-applied theme</strong>: After editing the JSON file, reload it via <strong>View → Themes → Browse for themes</strong> again. Power BI will reapply the updated styles.</p>
+<p><strong>Ready to customize?</strong> See <a href="#how-to-customize-this-theme">How to Customize This Theme</a> (Section 7) for step-by-step methods using VS Code autocomplete or AI assistance.</p>
+</blockquote>
+<hr>
+</details>
+<details open class="collapsible-section">
+<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="theme-properties">2. Theme Properties</span></summary>
+<div style="height:1px;background:#e5e7eb;margin:10px 0 18px;"></div>
+<h4 id="span-id%22basic-information%2221-basic-informationspan"><span id="basic-information">2.1 Basic Information</span></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Name</strong></td>
+<td>Custom_Theme</td>
+<td>Official theme name</td>
+</tr>
+<tr>
+<td><strong>Schema</strong></td>
+<td>reportThemeSchema-2.149.json</td>
+<td>Power BI theme schema version</td>
+</tr>
+<tr>
+<td><strong>Icons</strong></td>
+<td>15</td>
+<td>Custom SVG icon set</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details open class="collapsible-section">
+<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="custom-icons">2.2 Custom Icons</span></summary>
+<p>The theme includes 15 custom SVG icons for use in Power BI reports and filters.</p>
+<h4 id="span-id%22icon-summary-with-snippets%22221-icon-summary-with-snippetsspan"><span id="icon-summary-with-snippets">2.2.1 Icon Summary (with Snippets)</span></h4>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Count</th>
+<th>Purpose</th>
+<th>Snippets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Directional Indicators</strong></td>
+<td>5</td>
+<td>KPI trends, status changes, directional metrics</td>
+<td><img src="data:image/svg+xml;utf8,<svg width=%2216%22 height=%2216%22 viewBox=%220 0 16 16%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22><g clip-path=%22url(%23clip0_951_46030)%22><path d=%22M7.99967 14.6668C11.6815 14.6668 14.6663 11.682 14.6663 8.00016C14.6663 4.31826 11.6815 1.3335 7.99967 1.3335C4.31777 1.3335 1.33301 4.31826 1.33301 8.00016C1.33301 11.682 4.31777 14.6668 7.99967 14.6668Z%22 fill=%22%23F5E9EC%22 stroke=%22%23c2255c%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/><path d=%22M8.00033 5.3335V10.6668M8.00033 10.6668L10.3337 8.3335M8.00033 10.6668L5.66699 8.3335%22 stroke=%22%23c2255c%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></g><defs><clipPath id=%22clip0_951_46030%22><rect width=%2216%22 height=%2216%22 fill=%22white%22/></clipPath></defs></svg>" alt="Arrow Down Bad" style="width:16px;height:16px;" /> <img src="data:image/svg+xml;utf8,<svg width=%2216%22 height=%2216%22 viewBox=%220 0 16 16%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22><g clip-path=%22url(%23clip0_952_46050)%22><path d=%22M7.99967 14.6668C11.6815 14.6668 14.6663 11.682 14.6663 8.00016C14.6663 4.31826 11.6815 1.3335 7.99967 1.3335C4.31777 1.3335 1.33301 4.31826 1.33301 8.00016C1.33301 11.682 4.31777 14.6668 7.99967 14.6668Z%22 fill=%22%23E9F9F7%22 fill-opacity=%221%22 stroke=%22%2309B39D%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/><path d=%22M8.00033 5.3335V10.6668M8.00033 10.6668L10.3337 8.3335M8.00033 10.6668L5.66699 8.3335%22 stroke=%22%2309B39D%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></g><defs><clipPath id=%22clip0_952_46050%22><rect width=%2216%22 height=%2216%22 fill=%22white%22/></clipPath></defs></svg>" alt="Arrow Down Good" style="width:16px;height:16px;" /> <img src="data:image/svg+xml;utf8,<svg width=%2216%22 height=%2216%22 viewBox=%220 0 16 16%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22><g clip-path=%22url(%23clip0_951_46033)%22><path d=%22M7.99967 14.6668C11.6815 14.6668 14.6663 11.682 14.6663 8.00016C14.6663 4.31826 11.6815 1.3335 7.99967 1.3335C4.31777 1.3335 1.33301 4.31826 1.33301 8.00016C1.33301 11.682 4.31777 14.6668 7.99967 14.6668Z%22 fill=%22%23F4F4F4%22 stroke=%22%23404040%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/><path d=%22M5.33301 7.99984H10.6663M10.6663 7.99984L8.33301 5.6665M10.6663 7.99984L8.33301 10.3332%22 stroke=%22%23404040%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></g><defs><clipPath id=%22clip0_951_46033%22><rect width=%2216%22 height=%2216%22 fill=%22white%22/></clipPath></defs></svg>" alt="Arrow Right Neutral" style="width:16px;height:16px;" /> <img src="data:image/svg+xml;utf8,<svg width=%2216%22 height=%2216%22 viewBox=%220 0 16 16%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22><g clip-path=%22url(%23clip0_952_46052)%22><path d=%22M7.99967 14.6668C11.6815 14.6668 14.6663 11.682 14.6663 8.00016C14.6663 4.31826 11.6815 1.3335 7.99967 1.3335C4.31777 1.3335 1.33301 4.31826 1.33301 8.00016C1.33301 11.682 4.31777 14.6668 7.99967 14.6668Z%22 fill=%22%23F5E9EC%22 stroke=%22%23c2255c%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/><path d=%22M8.00033 10.6668V5.3335M8.00033 5.3335L10.3337 7.66683M8.00033 5.3335L5.66699 7.66683%22 stroke=%22%23c2255c%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></g><defs><clipPath id=%22clip0_952_46052%22><rect width=%2216%22 height=%2216%22 fill=%22white%22/></clipPath></defs></svg>" alt="Arrow Up Bad" style="width:16px;height:16px;" /> <img src="data:image/svg+xml;utf8,<svg width=%2216%22 height=%2216%22 viewBox=%220 0 16 16%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22><g clip-path=%22url(%23clip0_950_46027)%22><path d=%22M7.99967 14.6668C11.6815 14.6668 14.6663 11.682 14.6663 8.00016C14.6663 4.31826 11.6815 1.3335 7.99967 1.3335C4.31777 1.3335 1.33301 4.31826 1.33301 8.00016C1.33301 11.682 4.31777 14.6668 7.99967 14.6668Z%22 fill=%22%23E9F9F7%22 fill-opacity=%221%22 stroke=%22%2309B39D%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/><path d=%22M8.00033 10.6668V5.3335M8.00033 5.3335L10.3337 7.66683M8.00033 5.3335L5.66699 7.66683%22 stroke=%22%2309B39D%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></g><defs><clipPath id=%22clip0_950_46027%22><rect width=%2216%22 height=%2216%22 fill=%22white%22/></clipPath></defs></svg>" alt="Arrow Up Good" style="width:16px;height:16px;" /></td>
+</tr>
+<tr>
+<td><strong>Status &amp; Validation</strong></td>
+<td>3</td>
+<td>Success/failure states, validation indicators</td>
+<td><img src="data:image/svg+xml;utf8,<svg viewBox=%220 0 16 16%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22><path fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 d=%22M14.667 8A6.667 6.667 0 1 1 1.333 8a6.667 6.667 0 0 1 13.334 0M11.21 6.387a.667.667 0 1 0-1.085-.775L7.249 9.639 5.806 8.195a.667.667 0 0 0-.943.943l2 2a.667.667 0 0 0 1.013-.084z%22 fill=%22%2309b39d%22/></svg>" alt="Check Mark Green" style="width:16px;height:16px;" /> <img src="data:image/svg+xml;utf8,<svg fill=%22%23c2255c%22 viewBox=%220 0 16 16%22 xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22><path d=%22M8 1.333A6.667 6.667 0 1 0 14.667 8 6.667 6.667 0 0 0 8 1.333m2.473 8.193a.667.667 0 0 1 0 .947.667.667 0 0 1-.947 0L8 8.947l-1.527 1.527a.667.667 0 0 1-.947 0 .667.667 0 0 1 0-.947L7.053 8 5.527 6.473a.667.667 0 0 1 .947-.947L8 7.053l1.527-1.527a.667.667 0 0 1 .947.947L8.947 8Z%22/></svg>" alt="X Mark Red" style="width:16px;height:16px;" /> <img src="data:image/svg+xml;utf8,<svg fill=%22%23000000%22 viewBox=%220 0 16 16%22 xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22><path d=%22M8 1.333A6.667 6.667 0 1 0 14.667 8 6.667 6.667 0 0 0 8 1.333Zm2.473 8.193a.667.667 0 0 1 0 .947.667.667 0 0 1-.947 0L8 8.947l-1.527 1.527a.667.667 0 0 1-.947 0 .667.667 0 0 1 0-.947L7.053 8 5.527 6.473a.667.667 0 0 1 .947-.947L8 7.053l1.527-1.527a.667.667 0 0 1 .947.947L8.947 8Z%22/></svg>" alt="X Mark Black" style="width:16px;height:16px;" /></td>
+</tr>
+<tr>
+<td><strong>Alert &amp; Warning</strong></td>
+<td>2</td>
+<td>Warning messages, attention needed</td>
+<td><img src="data:image/svg+xml;utf8,<svg viewBox=%220 0 16 16%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22><path fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 d=%22M7.333 8.667a.667.667 0 1 0 1.333 0v-2a.667.667 0 1 0-1.333 0zm1.333 1.993a.667.667 0 1 0-1.333 0v.007a.667.667 0 1 0 1.333 0zM6.251 3.107c.762-1.371 2.735-1.371 3.497 0l4.401 7.921c.741 1.333-.223 2.971-1.748 2.971H3.599c-1.525 0-2.489-1.638-1.749-2.971z%22 fill=%22%23efbc1b%22/></svg>" alt="Alert Triangle" style="width:16px;height:16px;" /> <img src="data:image/svg+xml;utf8,<svg viewBox=%220 0 16 16%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22><path fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 d=%22M1.333 8a6.667 6.667 0 1 1 13.334 0A6.667 6.667 0 0 1 1.333 8m6 .667a.667.667 0 1 0 1.333 0V5.333a.667.667 0 1 0-1.333 0zm1.333 1.993a.667.667 0 1 0-1.333 0v.007a.667.667 0 1 0 1.333 0z%22 fill=%22%23efbc1b%22/></svg>" alt="Alert Circle" style="width:16px;height:16px;" /></td>
+</tr>
+<tr>
+<td><strong>Filter Controls</strong></td>
+<td>2</td>
+<td>Active/inactive filter states</td>
+<td><img src="data:image/svg+xml;utf8,<svg width=%2216%22 height=%2216%22 viewBox=%220 0 16 16%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22><path fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 d=%22M3.663 6.042c0-.439.28-.812.671-.95V3.7H2.333A.333.333 0 0 0 2 4.033v8a.333.333 0 0 0 .333.333h4.322a.333.333 0 1 1 0 .667H2.333a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h2.001v-.659a.333.333 0 1 1 .667 0v.659h3a.333.333 0 0 1 .333.333v5.706a1.008 1.008 0 0 1 0 1.904v1.391h5.333a.333.333 0 0 0 .333-.333v-8a.333.333 0 0 0-.333-.333H9.334a.333.333 0 1 1 0-.667h1.667V2.38a.333.333 0 1 1 .667 0v.653h1.999a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.334v.634a.333.333 0 1 1-.667 0v-2.692a1.008 1.008 0 0 1 0-1.9V3.7H5v1.391a1.008 1.008 0 0 1 0 1.905v4.356a.333.333 0 1 1-.667 0V6.993a1.01 1.01 0 0 1-.671-.951m1.018.341h-.023a.341.341 0 1 1 .023 0M11 8.992a1.009 1.009 0 0 1 0-1.901V4.717a.333.333 0 1 1 .667 0v2.374a1.008 1.008 0 0 1 0 1.905v2.356a.333.333 0 1 1-.667 0zm.677-.951a.341.341 0 1 0-.681 0 .341.341 0 0 0 .681 0m-3.333 1.983a.341.341 0 1 0-.682 0 .341.341 0 0 0 .682 0%22 fill=%22%23404143%22/></svg>" alt="Filter Dark Grey" style="width:16px;height:16px;" /> <img src="data:image/svg+xml;utf8,<svg width=%2216%22 height=%2216%22 viewBox=%220 0 16 16%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22><path fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 d=%22M3.663 6.042c0-.439.28-.812.671-.95V3.7H2.333A.333.333 0 0 0 2 4.033v8a.333.333 0 0 0 .333.333h4.322a.333.333 0 1 1 0 .667H2.333a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h2.001v-.659a.333.333 0 1 1 .667 0v.659h3a.333.333 0 0 1 .333.333v5.706a1.008 1.008 0 0 1 0 1.904v1.391h5.333a.333.333 0 0 0 .333-.333v-8a.333.333 0 0 0-.333-.333H9.334a.333.333 0 1 1 0-.667h1.667v-.653a.333.333 0 1 1 .667 0v.652h1.999a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.334v.634a.333.333 0 1 1-.667 0v-2.692a1.008 1.008 0 0 1 0-1.9V3.7H5v1.391a1.008 1.008 0 0 1 0 1.905v4.356a.333.333 0 1 1-.667 0V6.993a1.01 1.01 0 0 1-.671-.951m1.018.341h-.023a.341.341 0 1 1 .023 0M11 8.992a1.009 1.009 0 0 1 0-1.901V4.717a.333.333 0 1 1 .667 0v2.374a1.008 1.008 0 0 1 0 1.905v2.356a.333.333 0 1 1-.667 0zm.677-.951a.341.341 0 1 0-.681 0 .341.341 0 0 0 .681 0m-3.333 1.983a.341.341 0 1 0-.682 0 .341.341 0 0 0 .682 0%22 fill=%22%23da3f45%22/></svg>" alt="Filter Red" style="width:16px;height:16px;" /></td>
+</tr>
+<tr>
+<td><strong>Close Actions</strong></td>
+<td>2</td>
+<td>Dialog close, dismissal actions</td>
+<td><img src="data:image/svg+xml;utf8,<svg width=%2216%22 height=%2216%22 viewBox=%220 0 16 16%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22><path d=%22m13.63 3.65-1.28-1.27L8 6.73 3.64 2.38 2.37 3.65l4.35 4.36-4.34 4.34 1.27 1.28L8 9.28l4.35 4.36 1.28-1.28-4.36-4.35z%22 fill=%22%23000000%22/></svg>" alt="Close Black" style="width:16px;height:16px;" /> <img src="data:image/svg+xml;utf8,<svg width=%2216%22 height=%2216%22 fill=%22%23d83f47%22 viewBox=%220 0 16 16%22 xmlns=%22http://www.w3.org/2000/svg%22><path d=%22m13.63 3.65-1.28-1.27L8 6.73 3.64 2.38 2.37 3.65l4.35 4.36-4.34 4.34 1.27 1.28L8 9.28l4.35 4.36 1.28-1.28-4.36-4.35z%22/></svg>" alt="Close Red" style="width:16px;height:16px;" /></td>
+</tr>
+<tr>
+<td><strong>Utility</strong></td>
+<td>1</td>
+<td>Collapse, minimize actions</td>
+<td><img src="data:image/svg+xml;utf8,<svg viewBox=%220 0 16 16%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22><path fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 d=%22M1.333 8a6.667 6.667 0 1 1 13.334 0A6.667 6.667 0 0 1 1.333 8m4 0A.667.667 0 0 1 6 7.333h4a.667.667 0 1 1 0 1.333H6a.667.667 0 0 1-.667-.667%22 fill=%22%23404040%22/></svg>" alt="Minus Dark Grey" style="width:16px;height:16px;" /></td>
+</tr>
+</tbody>
+</table>
+</details>
+<hr>
+<details open class="collapsible-section">
+<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="color-palette">3. Color Palette</span></summary>
+<div style="height:1px;background:#e5e7eb;margin:10px 0 18px;"></div>
+<blockquote>
+<p><strong>For detailed information on how colors are applied to visual elements, structural color classes, and foreground/background color hierarchy, see <a href="https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-report-themes#report-theme-json-file-format">Microsoft Power BI Color Palette Documentation</a>.</strong></p>
+</blockquote>
+<h4 id="span-id%22theme-colors%2231-theme-colorsspan"><span id="theme-colors">3.1 Theme Colors</span></h4>
+<div style="display:grid;grid-template-columns:repeat(4,140px);gap:20px;">
+  <div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#4F73B8;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#4F73B8<br><span style="color:#6b7280;">Data 1</span></div>
+  </div>
+  <div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#49A9D5;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#49A9D5<br><span style="color:#6b7280;">Data 2</span></div>
+  </div>
+  <div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#D7A767;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#D7A767<br><span style="color:#6b7280;">Data 3</span></div>
+  </div>
+  <div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#DC7653;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#DC7653<br><span style="color:#6b7280;">Data 4</span></div>
+  </div>
+  <div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#8783FF;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#8783FF<br><span style="color:#6b7280;">Data 5</span></div>
+  </div>
+  <div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#1C2632;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#1C2632<br><span style="color:#6b7280;">Data 6</span></div>
+  </div>
+  <div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#8793A3;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#8793A3<br><span style="color:#6b7280;">Data 7</span></div>
+  </div>
+  <div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#DBDFE4;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#DBDFE4<br><span style="color:#6b7280;">Data 8</span></div>
+  </div>
+</div>
+<blockquote>
+<p><strong>Purpose</strong>: Colors are applied in sequence (first series gets color 0, second gets color 1, etc.) for multi-color visualizations.</p>
+</blockquote>
+<h4 id="span-id%22semantic-status-colors%2232-semantic-status-colorsspan"><span id="semantic-status-colors">3.2 Semantic Status Colors</span></h4>
+<div style="display:grid;grid-template-columns:repeat(3,140px);gap:20px;">
+  <div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#09B39D;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#09B39D<br><span style="color:#6b7280;">Positive / Good</span></div>
+  </div>
+  <div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#404040;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#404040<br><span style="color:#6b7280;">Neutral / Middle</span></div>
+  </div>
+  <div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#c2255c;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#c2255c<br><span style="color:#6b7280;">Negative / Bad</span></div>
+  </div>
+</div>
+<blockquote>
+<p><strong>Purpose</strong>: Used for KPIs, gauges, and conditional formatting to indicate status and values.</p>
+</blockquote>
+<h4 id="span-id%22scale--range-colors%2233-scale--range-colorsspan"><span id="scale--range-colors">3.3 Scale &amp; Range Colors</span></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Hex Code</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>maximum</strong></td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#4F73B8;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#4F73B8</td>
+<td>Maximum value indicator (Primary Blue)</td>
+</tr>
+<tr>
+<td><strong>center</strong></td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#95A9CE;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#95A9CE</td>
+<td>Center/neutral value indicator</td>
+</tr>
+<tr>
+<td><strong>minimum</strong></td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#DBDFE4;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#DBDFE4</td>
+<td>Minimum value indicator (Light Gray)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Purpose</strong>: Used for heat maps, range visualizations, and color scales.</p>
+</blockquote>
+<h4 id="span-id%22background--foreground-colors%2234-background--foreground-colorsspan"><span id="background--foreground-colors">3.4 Background &amp; Foreground Colors</span></h4>
+<h5 id="visual-background-palette">Visual Background Palette</h5>
+<div style="display:grid;grid-template-columns:repeat(3,140px);gap:20px;">
+  <div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#F9F9F9;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#F9F9F9<br><span style="color:#6b7280;">Main Background</span></div>
+  </div>
+  <div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#DBDFE4;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#DBDFE4<br><span style="color:#6b7280;">Background Light</span></div>
+  </div>
+  <div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#F6F8FB;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#F6F8FB<br><span style="color:#6b7280;">Page Background</span></div>
+  </div>
+</div>
+<h5 id="visual-text-color-examples">Visual Text Color Examples</h5>
+<div style="display:grid;grid-template-columns:repeat(3,140px);gap:20px;">
+  <div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#1C2632;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#1C2632<br><span style="color:#6b7280;">Primary Text</span></div>
+  </div>
+  <div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#8793A3;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#8793A3<br><span style="color:#6b7280;">Secondary Text</span></div>
+  </div>
+  <div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#4F73B8;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#4F73B8<br><span style="color:#6b7280;">Tertiary Text</span></div>
+  </div>
+</div>
+<h5 id="all-text--background-color-properties">All Text &amp; Background Color Properties</h5>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Hex Code</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>foreground</strong></td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#1C2632;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#1C2632</td>
+<td>Primary text color (Dark Blue-Gray)</td>
+</tr>
+<tr>
+<td><strong>foregroundNeutralSecondary</strong></td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#1C2632;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#1C2632</td>
+<td>Secondary text (Dark Blue-Gray)</td>
+</tr>
+<tr>
+<td><strong>foregroundNeutralTertiary</strong></td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#4F73B8;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#4F73B8</td>
+<td>Tertiary text (Primary Blue)</td>
+</tr>
+<tr>
+<td><strong>background</strong></td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#F9F9F9;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#F9F9F9</td>
+<td>Main background (Light Gray)</td>
+</tr>
+<tr>
+<td><strong>backgroundLight</strong></td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#DBDFE4;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#DBDFE4</td>
+<td>Light background elements</td>
+</tr>
+<tr>
+<td><strong>backgroundNeutral</strong></td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#B4BAC3;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#B4BAC3</td>
+<td>Neutral background tint</td>
+</tr>
+<tr>
+<td><strong>tableAccent</strong></td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#426871;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#426871</td>
+<td>Table accent color (Dark Teal)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>For comprehensive details on structural color classes and their usage across visual elements, see <a href="https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-report-themes#set-structural-colors">Microsoft Power BI Structural Colors Documentation</a>.</strong></p>
+</blockquote>
+</details>
+<hr>
+<details open class="collapsible-section">
+<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="typography--text-classes">4. Typography & Text Classes</span></summary>
+<div style="height:1px;background:#e5e7eb;margin:10px 0 18px;"></div>
+<h4 id="span-id%22font-face%2241-font-facespan"><span id="font-face">4.1 Font Face</span></h4>
+<p>All text elements use <strong>Calibri</strong> as the primary font family.</p>
+<h4 id="span-id%22text-classes-reference%2242-text-classes-referencespan"><span id="text-classes-reference">4.2 Text Classes Reference</span></h4>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Type</th>
+<th>Inherits From</th>
+<th>Font Size</th>
+<th>Font</th>
+<th>Color</th>
+<th>Sample</th>
+<th>Used In</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>callout</strong></td>
+<td>Primary</td>
+<td>-</td>
+<td>11pt</td>
+<td>Calibri</td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#1C2632;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#1C2632</td>
+<td><span style="font-family:Calibri;font-size:11pt;color:#1C2632;">Sample Text</span></td>
+<td>Card data labels, KPI indicators</td>
+</tr>
+<tr>
+<td><strong>title</strong></td>
+<td>Primary</td>
+<td>-</td>
+<td>10pt</td>
+<td>Calibri</td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#1C2632;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#1C2632</td>
+<td><span style="font-family:Calibri;font-size:10pt;color:#1C2632;">Sample Text</span></td>
+<td>Category/Value axis titles, Multi-row card titles, Slicer headers</td>
+</tr>
+<tr>
+<td><strong>header</strong></td>
+<td>Primary</td>
+<td>-</td>
+<td>Default</td>
+<td>Calibri</td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#1C2632;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#1C2632</td>
+<td><span style="font-family:Calibri;color:#1C2632;">Sample Text</span></td>
+<td>Key influencers headers</td>
+</tr>
+<tr>
+<td><strong>label</strong></td>
+<td>Primary</td>
+<td>-</td>
+<td>10pt</td>
+<td>Calibri</td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#8793A3;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#8793A3</td>
+<td><span style="font-family:Calibri;font-size:10pt;color:#8793A3;">Sample Text</span></td>
+<td>Table/Matrix column &amp; row headers, grid, values</td>
+</tr>
+<tr>
+<td><strong>boldLabel</strong></td>
+<td>Secondary</td>
+<td>label</td>
+<td>Inherited</td>
+<td>Calibri</td>
+<td>Inherited</td>
+<td><span style="font-family:Calibri;font-size:10pt;color:#8793A3;font-weight:bold;">Sample Text</span></td>
+<td>Matrix subtotals, grand totals, Table totals</td>
+</tr>
+<tr>
+<td><strong>semiboldLabel</strong></td>
+<td>Secondary</td>
+<td>label</td>
+<td>Inherited</td>
+<td>Calibri</td>
+<td>Inherited</td>
+<td><span style="font-family:Calibri;font-size:10pt;color:#8793A3;font-weight:600;">Sample Text</span></td>
+<td>Key influencers profile text</td>
+</tr>
+<tr>
+<td><strong>largeLabel</strong></td>
+<td>Secondary</td>
+<td>label</td>
+<td>12pt</td>
+<td>Inherited</td>
+<td>Inherited</td>
+<td><span style="font-family:Calibri;font-size:12pt;color:#8793A3;">Sample Text</span></td>
+<td>Multi-row card data labels</td>
+</tr>
+<tr>
+<td><strong>smallLabel</strong></td>
+<td>Secondary</td>
+<td>label</td>
+<td>9pt</td>
+<td>Inherited</td>
+<td>Inherited</td>
+<td><span style="font-family:Calibri;font-size:9pt;color:#8793A3;">Sample Text</span></td>
+<td>Reference line labels, Slicer input text, Key influencers text</td>
+</tr>
+<tr>
+<td><strong>lightLabel</strong></td>
+<td>Secondary</td>
+<td>label</td>
+<td>Inherited</td>
+<td>Inherited</td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#595B69;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#595B69</td>
+<td><span style="font-family:Calibri;font-size:10pt;color:#595B69;">Sample Text</span></td>
+<td>Legend text, Button text, Category axis labels, Gauge target</td>
+</tr>
+<tr>
+<td><strong>largeLightLabel</strong></td>
+<td>Secondary</td>
+<td>label</td>
+<td>12pt</td>
+<td>Inherited</td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#8793A3;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#8793A3</td>
+<td><span style="font-family:Calibri;font-size:12pt;color:#8793A3;">Sample Text</span></td>
+<td>Card/Gauge category labels, Multi-row card category labels</td>
+</tr>
+<tr>
+<td><strong>smallLightLabel</strong></td>
+<td>Secondary</td>
+<td>label</td>
+<td>9pt</td>
+<td>Inherited</td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#595B69;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#595B69</td>
+<td><span style="font-family:Calibri;font-size:9pt;color:#595B69;">Sample Text</span></td>
+<td>Data labels, Value axis labels</td>
+</tr>
+<tr>
+<td><strong>largeTitle</strong></td>
+<td>Secondary</td>
+<td>title</td>
+<td>14pt</td>
+<td>Inherited</td>
+<td>Inherited</td>
+<td><span style="font-family:Calibri;font-size:14pt;color:#1C2632;">Sample Text</span></td>
+<td>Visual titles</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note</strong>: Secondary classes automatically inherit properties from their primary class. Properties shown in the table are explicitly defined in the theme JSON file. For example, <code>boldLabel</code> explicitly defines <code>fontFace: &quot;Calibri&quot;</code> even though it matches the parent <code>label</code> class. Properties not explicitly defined are inherited from the parent class.
+For complete details on text class usage and formatting options, see <a href="https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-report-themes#set-formatted-text-defaults">Microsoft Power BI Text Classes Documentation</a>.</p>
+</blockquote>
+</details>
+<hr>
+<details open class="collapsible-section">
+<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="theme-file-structure">5. Theme File Structure</span></summary>
+<div style="height:1px;background:#e5e7eb;margin:10px 0 18px;"></div>
+<p>The Custom_Theme_Styles.json file follows a hierarchical structure with four main levels. Each level builds upon the previous one, with more specific settings overriding general ones.</p>
+<h4 id="span-id%22summary-hierarchy-overview%2251-summary-hierarchy-overviewspan"><span id="summary-hierarchy-overview">5.1 Summary Hierarchy Overview</span></h4>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Name</th>
+<th>Key Components</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Global Theme Settings</td>
+<td>• Colors (8 data, 3 semantic, scale)<br>• Foreground/background colors<br>• Text classes (12 typography styles)</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>General Visual Settings</td>
+<td>• Universal visual properties<br>• Page background &amp; outspace<br>• Default spacing &amp; padding</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Visual-Specific Settings</td>
+<td>• Individual visual type configs<br>• lineChart, pieChart, slicer, table<br>• 40+ visualization types</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Preset Styles</td>
+<td>• WithBackground (modern style)<br>• WithoutBackground (minimal style)<br>• Visual chrome &amp; spacing overrides</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hierarchy Flow</strong>: Level 1 → Level 2 → Level 3 → Level 4 (each level refines and overrides previous settings)</p>
+<h4 id="span-id%22complete-hierarchy-diagram%2252-complete-hierarchy-diagramspan"><span id="complete-hierarchy-diagram">5.2 Complete Hierarchy Diagram</span></h4>
+<pre class="hljs"><code><div>Custom_Theme_Styles.json
+│
+├─── LEVEL 1: GLOBAL THEME SETTINGS
+│    ├─ name
+│    ├─ $schema
+│    ├─ icons
+│    ├─ dataColors[] (8 colors)
+│    ├─ Semantic Colors (good, neutral, bad)
+│    ├─ Scale Colors (maximum, center, minimum)
+│    ├─ Text/Foreground Colors
+│    ├─ Background Colors
+│    ├─ tableAccent
+│    │
+│    └─ textClasses (Typography)
+│       ├─ callout
+│       ├─ title
+│       ├─ header
+│       ├─ label
+│       ├─ smallLightLabel
+│       ├─ largeLightLabel
+│       ├─ boldLabel
+│       ├─ lightLabel
+│       ├─ smallLabel
+│       ├─ largeLabel
+│       ├─ semiboldLabel
+│       └─ largeTitle
+│
+└─── LEVEL 2-4: VISUAL STYLES
+     └─ visualStyles
+        │
+        ├─ &quot;*&quot;: &quot;*&quot; (GENERAL VISUAL SETTINGS - Level 2)
+        │  ├─ general[]
+        │  ├─ subtotals[]
+        │  ├─ background[]
+        │  ├─ border[]
+        │  ├─ title[]
+        │  ├─ subTitle[]
+        │  ├─ divider[]
+        │  ├─ spacing[]
+        │  ├─ padding[]
+        │  ├─ categoryAxis[]
+        │  └─ valueAxis[]
+        │
+        ├─ page (LEVEL 2: PAGE SETTINGS)
+        │  └─ &quot;*&quot;
+        │     ├─ outspace[]
+        │     └─ background[]
+        │
+        ├─ lineChart (LEVEL 3: VISUAL-SPECIFIC - Example)
+        │  ├─ &quot;*&quot; (Default settings)
+        │  │  ├─ stylePreset[]
+        │  │  ├─ legend[]
+        │  │  ├─ labels[]
+        │  │  ├─ lineStyles[]
+        │  │  └─ ... (visual-specific properties)
+        │  │
+        │  ├─ WithBackground (LEVEL 4: PRESET STYLE)
+        │  │  ├─ background[]
+        │  │  └─ border[]
+        │  │
+        │  └─ WithoutBackground (LEVEL 4: PRESET STYLE)
+        │     ├─ background[]
+        │     ├─ border[]
+        │     ├─ title[]
+        │     ├─ padding[]
+        │     └─ ... (preset overrides)
+        │
+        ├─ clusteredColumnChart
+        ├─ pieChart
+        ├─ donutChart
+        ├─ gauge
+        ├─ slicer
+        ├─ card
+        ├─ table
+        ├─ pivotTable
+        ├─ tableEx
+        ├─ textbox
+        ├─ ... (40+ visual types)
+        │
+        └─ filter, group (special containers)
+</div></code></pre>
+<details open class="collapsible-section">
+<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="level-1-global-theme-settings">5.3 Level 1: Global Theme Settings</span></summary>
+<p>Global theme settings are defined at the root level and apply universally across the entire Power BI report.</p>
+<h4 id="span-id%22basic-theme-metadata%22531-basic-theme-metadataspan"><span id="basic-theme-metadata">5.3.1 Basic Theme Metadata</span></h4>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Custom_Theme"</span>,
+  <span class="hljs-attr">"$schema"</span>: <span class="hljs-string">"reportThemeSchema-2.149.json"</span>,
+  <span class="hljs-attr">"icons"</span>: []
+}
+</div></code></pre>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td>Custom_Theme</td>
+<td>Identifies the theme in Power BI</td>
+</tr>
+<tr>
+<td><strong>$schema</strong></td>
+<td>reportThemeSchema-2.149.json</td>
+<td>Specifies the Power BI schema version</td>
+</tr>
+<tr>
+<td><strong>icons</strong></td>
+<td>[]</td>
+<td>Array for custom icon definitions</td>
+</tr>
+</tbody>
+</table>
+<h4 id="span-id%22global-color-palette%22532-global-color-palettespan"><span id="global-color-palette">5.3.2 Global Color Palette</span></h4>
+<p>The color palette includes:</p>
+<ul>
+<li><strong>Data Colors</strong>: 8 sequential colors for visualization series</li>
+<li><strong>Semantic Colors</strong>: good (teal), neutral (gray), bad (red)</li>
+<li><strong>Scale Colors</strong>: maximum, center, minimum for heat maps</li>
+<li><strong>Text Colors</strong>: Hierarchy of foreground colors for text elements</li>
+<li><strong>Background Colors</strong>: Main, light, and neutral background options</li>
+</ul>
+<p>See the <a href="#color-palette">Color Palette</a> section above for detailed color visualization.</p>
+<h4 id="span-id%22global-text-classes%22533-global-text-classesspan"><span id="global-text-classes">5.3.3 Global Text Classes</span></h4>
+<p>Text classes define typography styles used throughout the theme. These are part of the global settings and apply to text elements systematically:</p>
+<pre class="hljs"><code><div><span class="hljs-string">"textClasses"</span>: {
+  <span class="hljs-attr">"callout"</span>: {
+    <span class="hljs-attr">"fontFace"</span>: <span class="hljs-string">"Calibri"</span>,
+    <span class="hljs-attr">"fontSize"</span>: <span class="hljs-number">11</span>,
+    <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#1C2632"</span>
+  },
+  <span class="hljs-comment">// ... additional text classes</span>
+}
+</div></code></pre>
+<p>12 typography styles defined with font family, size, and color specifications. See the <a href="#typography--text-classes">Typography &amp; Text Classes</a> section for complete reference.</p>
+</details>
+<details open class="collapsible-section">
+<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="level-2-general-visual-settings">5.4 Level 2: General Visual Settings</span></summary>
+<p>General visual settings apply to <strong>all visuals</strong> and define default behavior. These are defined in <code>&quot;visualStyles&quot;: { &quot;*&quot;: { &quot;*&quot;: { ... } } }</code>.</p>
+<h4 id="span-id%22general-layout-properties%22541-general-layout-propertiesspan"><span id="general-layout-properties">5.4.1 General Layout Properties</span></h4>
+<pre class="hljs"><code><div><span class="hljs-string">"general"</span>: [
+  {
+    <span class="hljs-attr">"responsive"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"responsiveLegacy"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"keepLayerOrder"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"layout"</span>: <span class="hljs-string">"Tabular"</span>
+  }
+]
+</div></code></pre>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>responsive</strong></td>
+<td>false</td>
+<td>Disable responsive layout</td>
+</tr>
+<tr>
+<td><strong>responsiveLegacy</strong></td>
+<td>false</td>
+<td>Disable legacy responsive mode</td>
+</tr>
+<tr>
+<td><strong>keepLayerOrder</strong></td>
+<td>true</td>
+<td>Maintain layer/visual order</td>
+</tr>
+<tr>
+<td><strong>layout</strong></td>
+<td>Tabular</td>
+<td>Table-based layout system</td>
+</tr>
+</tbody>
+</table>
+<h4 id="span-id%22subtotals-configuration%22542-subtotals-configurationspan"><span id="subtotals-configuration">5.4.2 Subtotals Configuration</span></h4>
+<pre class="hljs"><code><div><span class="hljs-string">"subtotals"</span>: [
+  {
+    <span class="hljs-attr">"rowSubtotalsPosition"</span>: <span class="hljs-string">"Bottom"</span>
+  }
+]
+</div></code></pre>
+<p>Position subtotals at bottom of tables/matrices.</p>
+<h4 id="span-id%22background-configuration%22543-background-configurationspan"><span id="background-configuration">5.4.3 Background Configuration</span></h4>
+<pre class="hljs"><code><div><span class="hljs-string">"background"</span>: [
+  {
+    <span class="hljs-attr">"show"</span>: <span class="hljs-literal">true</span>
+  }
+]
+</div></code></pre>
+<p>Enable backgrounds for all visuals by default.</p>
+<h4 id="span-id%22border-configuration%22544-border-configurationspan"><span id="border-configuration">5.4.4 Border Configuration</span></h4>
+<pre class="hljs"><code><div><span class="hljs-string">"border"</span>: [
+  {
+    <span class="hljs-attr">"show"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"radius"</span>: <span class="hljs-number">7</span>,
+    <span class="hljs-attr">"color"</span>: {
+      <span class="hljs-attr">"solid"</span>: {
+        <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#FFFFFF"</span>
+      }
+    }
+  }
+]
+</div></code></pre>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>show</strong></td>
+<td>true</td>
+<td>Display borders</td>
+</tr>
+<tr>
+<td><strong>radius</strong></td>
+<td>7</td>
+<td>Border corner radius (pixels)</td>
+</tr>
+<tr>
+<td><strong>color</strong></td>
+<td>#FFFFFF</td>
+<td>White border color</td>
+</tr>
+</tbody>
+</table>
+<h4 id="span-id%22title-configuration%22545-title-configurationspan"><span id="title-configuration">5.4.5 Title Configuration</span></h4>
+<pre class="hljs"><code><div><span class="hljs-string">"title"</span>: [
+  {
+    <span class="hljs-attr">"show"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"alignment"</span>: <span class="hljs-string">"left"</span>,
+    <span class="hljs-attr">"titleWrap"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"fontFamily"</span>: <span class="hljs-string">"Calibri"</span>,
+    <span class="hljs-attr">"fontSize"</span>: <span class="hljs-number">12</span>,
+    <span class="hljs-attr">"fontColor"</span>: {
+      <span class="hljs-attr">"solid"</span>: {
+        <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#8793A3"</span>
+      }
+    },
+    <span class="hljs-attr">"bold"</span>: <span class="hljs-literal">false</span>
+  }
+]
+</div></code></pre>
+<h4 id="span-id%22subtitle-configuration%22546-subtitle-configurationspan"><span id="subtitle-configuration">5.4.6 Subtitle Configuration</span></h4>
+<pre class="hljs"><code><div><span class="hljs-string">"subTitle"</span>: [
+  {
+    <span class="hljs-attr">"show"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"alignment"</span>: <span class="hljs-string">"left"</span>,
+    <span class="hljs-attr">"titleWrap"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"fontFamily"</span>: <span class="hljs-string">"Calibri"</span>,
+    <span class="hljs-attr">"fontSize"</span>: <span class="hljs-number">10.5</span>,
+    <span class="hljs-attr">"fontColor"</span>: {
+      <span class="hljs-attr">"solid"</span>: {
+        <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#B7BEC8"</span>
+      }
+    },
+    <span class="hljs-attr">"bold"</span>: <span class="hljs-literal">true</span>
+  }
+]
+</div></code></pre>
+<h4 id="span-id%22divider-configuration%22547-divider-configurationspan"><span id="divider-configuration">5.4.7 Divider Configuration</span></h4>
+<pre class="hljs"><code><div><span class="hljs-string">"divider"</span>: [
+  {
+    <span class="hljs-attr">"show"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"color"</span>: {
+      <span class="hljs-attr">"solid"</span>: {
+        <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#FFFFFF"</span>
+      }
+    },
+    <span class="hljs-attr">"ignorePadding"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"style"</span>: <span class="hljs-string">"solid"</span>,
+    <span class="hljs-attr">"width"</span>: <span class="hljs-number">1.5</span>
+  }
+]
+</div></code></pre>
+<h4 id="span-id%22spacing-padding-configuration%22548-spacing--padding-configurationspan"><span id="spacing-padding-configuration">5.4.8 Spacing &amp; Padding Configuration</span></h4>
+<pre class="hljs"><code><div><span class="hljs-string">"spacing"</span>: [
+  {
+    <span class="hljs-attr">"verticalSpacing"</span>: <span class="hljs-number">2</span>
+  }
+],
+<span class="hljs-string">"padding"</span>: [
+  {
+    <span class="hljs-attr">"top"</span>: <span class="hljs-number">10</span>,
+    <span class="hljs-attr">"bottom"</span>: <span class="hljs-number">10</span>,
+    <span class="hljs-attr">"left"</span>: <span class="hljs-number">10</span>,
+    <span class="hljs-attr">"right"</span>: <span class="hljs-number">10</span>
+  }
+]
+</div></code></pre>
+<ul>
+<li><strong>Vertical Spacing</strong>: 2px</li>
+<li><strong>Padding</strong>: 10px all sides</li>
+</ul>
+<h4 id="span-id%22axis-configuration%22549-axis-configurationspan"><span id="axis-configuration">5.4.9 Axis Configuration</span></h4>
+<p><strong>Category Axis</strong>:</p>
+<pre class="hljs"><code><div><span class="hljs-string">"categoryAxis"</span>: [
+  {
+    <span class="hljs-attr">"show"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"fontSize"</span>: <span class="hljs-number">10</span>,
+    <span class="hljs-attr">"maxMarginFactor"</span>: <span class="hljs-number">50</span>,
+    <span class="hljs-attr">"concatenateLabels"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"showAxisTitle"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"titleFontSize"</span>: <span class="hljs-number">12</span>
+  }
+]
+</div></code></pre>
+<p><strong>Value Axis</strong>:</p>
+<pre class="hljs"><code><div><span class="hljs-string">"valueAxis"</span>: [
+  {
+    <span class="hljs-attr">"show"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"position"</span>: <span class="hljs-string">"Left"</span>,
+    <span class="hljs-attr">"gridlineShow"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"axisScale"</span>: <span class="hljs-string">"Linear"</span>,
+    <span class="hljs-attr">"fontSize"</span>: <span class="hljs-number">10</span>,
+    <span class="hljs-attr">"fontFamily"</span>: <span class="hljs-string">"wf_standard-font"</span>,
+    <span class="hljs-attr">"bold"</span>: <span class="hljs-literal">true</span>
+    <span class="hljs-comment">// ... additional properties</span>
+  }
+]
+</div></code></pre>
+<h4 id="span-id%22page-specific-settings%225410-page-specific-settingsspan"><span id="page-specific-settings">5.4.10 Page-Specific Settings</span></h4>
+<p>Page-level settings (also part of Level 2) apply to report pages themselves:</p>
+<pre class="hljs"><code><div><span class="hljs-string">"page"</span>: {
+  <span class="hljs-attr">"*"</span>: {
+    <span class="hljs-attr">"outspace"</span>: [
+      {
+        <span class="hljs-attr">"color"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#FFFFFF"</span>
+          }
+        }
+      }
+    ],
+    <span class="hljs-attr">"background"</span>: [
+      {
+        <span class="hljs-attr">"color"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#F6F8FB"</span>
+          }
+        },
+        <span class="hljs-attr">"transparency"</span>: <span class="hljs-number">0</span>
+      }
+    ]
+  }
+}
+</div></code></pre>
+<ul>
+<li><strong>Outspace</strong>: White canvas area</li>
+<li><strong>Background</strong>: Light blue-gray page background</li>
+</ul>
+</details>
+<details open class="collapsible-section">
+<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="level-3-visual-specific-settings">5.5 Level 3: Visual-Specific Settings</span></summary>
+<p>Each visualization type has its own settings that override general defaults from Level 2:</p>
+<pre class="hljs"><code><div><span class="hljs-string">"visualType"</span>: {
+  <span class="hljs-attr">"*"</span>: {                           <span class="hljs-comment">// Default settings</span>
+    <span class="hljs-attr">"stylePreset"</span>: [...],
+    <span class="hljs-attr">"legend"</span>: [...],
+    <span class="hljs-attr">"labels"</span>: [...],
+    <span class="hljs-comment">// ... visual-specific properties</span>
+  },
+  <span class="hljs-attr">"WithBackground"</span>: {              <span class="hljs-comment">// Preset 1</span>
+    <span class="hljs-attr">"background"</span>: [...],
+    <span class="hljs-attr">"border"</span>: [...]
+  },
+  <span class="hljs-attr">"WithoutBackground"</span>: {           <span class="hljs-comment">// Preset 2</span>
+    <span class="hljs-attr">"background"</span>: [...],
+    <span class="hljs-attr">"border"</span>: [...]
+  }
+}
+</div></code></pre>
+<h4 id="span-id%22example-line-chart-structure%22551-example-line-chart-structurespan"><span id="example-line-chart-structure">5.5.1 Example: Line Chart Structure</span></h4>
+<pre class="hljs"><code><div><span class="hljs-string">"lineChart"</span>: {
+  <span class="hljs-attr">"*"</span>: {
+    <span class="hljs-attr">"stylePreset"</span>: [
+      {
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"WithBackground"</span>
+      }
+    ],
+    <span class="hljs-attr">"legend"</span>: [
+      {
+        <span class="hljs-attr">"legendMarkerRendering"</span>: <span class="hljs-string">"markerOnly"</span>,
+        <span class="hljs-attr">"matchLineColor"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"show"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"position"</span>: <span class="hljs-string">"TopCenter"</span>,
+        <span class="hljs-attr">"showTitle"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"fontSize"</span>: <span class="hljs-number">10</span>,
+        <span class="hljs-attr">"defaultToCircle"</span>: <span class="hljs-literal">true</span>
+      }
+    ],
+    <span class="hljs-attr">"labels"</span>: [
+      {
+        <span class="hljs-attr">"color"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#595B69"</span>
+          }
+        },
+        <span class="hljs-attr">"fontFamily"</span>: <span class="hljs-string">"wf_standard-font"</span>,
+        <span class="hljs-attr">"bold"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"show"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"enableBackground"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"backgroundColor"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#E5EEFF"</span>
+          }
+        },
+        <span class="hljs-attr">"backgroundTransparency"</span>: <span class="hljs-number">15</span>
+      }
+    ],
+    <span class="hljs-attr">"lineStyles"</span>: [
+      {
+        <span class="hljs-attr">"strokeWidth"</span>: <span class="hljs-number">4</span>,
+        <span class="hljs-attr">"lineStyle"</span>: <span class="hljs-string">"solid"</span>,
+        <span class="hljs-attr">"lineChartType"</span>: <span class="hljs-string">"smooth"</span>,
+        <span class="hljs-attr">"showMarker"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"markerShape"</span>: <span class="hljs-string">"circle"</span>,
+        <span class="hljs-attr">"markerSize"</span>: <span class="hljs-number">5</span>
+      }
+    ]
+  },
+  <span class="hljs-attr">"WithBackground"</span>: {
+    <span class="hljs-comment">// Override settings</span>
+  },
+  <span class="hljs-attr">"WithoutBackground"</span>: {
+    <span class="hljs-comment">// Override settings</span>
+  }
+}
+</div></code></pre>
+</details>
+<details open class="collapsible-section">
+<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="level-4-visual-preset-styles">5.6 Level 4: Visual Preset Styles</span></summary>
+<p>Style presets (the final level) allow different visual appearances for the same chart type within visual-specific settings.</p>
+<h4 id="span-id%22withbackground-preset%22561-withbackground-presetspan"><span id="withbackground-preset">5.6.1 WithBackground Preset</span></h4>
+<pre class="hljs"><code><div><span class="hljs-string">"WithBackground"</span>: {
+  <span class="hljs-attr">"background"</span>: [
+    {
+      <span class="hljs-attr">"show"</span>: <span class="hljs-literal">true</span>
+    }
+  ],
+  <span class="hljs-attr">"border"</span>: [
+    {
+      <span class="hljs-attr">"show"</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">"radius"</span>: <span class="hljs-number">7</span>,
+      <span class="hljs-attr">"color"</span>: {
+        <span class="hljs-attr">"solid"</span>: {
+          <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#FFFFFF"</span>
+        }
+      }
+    }
+  ]
+}
+</div></code></pre>
+<p><strong>Characteristics</strong>:</p>
+<ul>
+<li>Visible background container</li>
+<li>White border with 7px radius</li>
+<li>10px padding</li>
+<li>Full visual chrome</li>
+</ul>
+<h4 id="span-id%22withoutbackground-preset%22562-withoutbackground-presetspan"><span id="withoutbackground-preset">5.6.2 WithoutBackground Preset</span></h4>
+<pre class="hljs"><code><div><span class="hljs-string">"WithoutBackground"</span>: {
+  <span class="hljs-attr">"background"</span>: [
+    {
+      <span class="hljs-attr">"show"</span>: <span class="hljs-literal">false</span>
+    }
+  ],
+  <span class="hljs-attr">"border"</span>: [
+    {
+      <span class="hljs-attr">"show"</span>: <span class="hljs-literal">false</span>
+    }
+  ],
+  <span class="hljs-attr">"title"</span>: [
+    {
+      <span class="hljs-attr">"show"</span>: <span class="hljs-literal">false</span>
+    }
+  ],
+  <span class="hljs-attr">"subTitle"</span>: [
+    {
+      <span class="hljs-attr">"show"</span>: <span class="hljs-literal">false</span>
+    }
+  ],
+  <span class="hljs-attr">"divider"</span>: [
+    {
+      <span class="hljs-attr">"show"</span>: <span class="hljs-literal">false</span>
+    }
+  ],
+  <span class="hljs-attr">"padding"</span>: [
+    {
+      <span class="hljs-attr">"left"</span>: <span class="hljs-number">5</span>,
+      <span class="hljs-attr">"right"</span>: <span class="hljs-number">5</span>,
+      <span class="hljs-attr">"bottom"</span>: <span class="hljs-number">5</span>,
+      <span class="hljs-attr">"top"</span>: <span class="hljs-number">5</span>
+    }
+  ]
+}
+</div></code></pre>
+<p><strong>Characteristics</strong>:</p>
+<ul>
+<li>No visible background</li>
+<li>No border</li>
+<li>Hidden title/subtitle</li>
+<li>5px padding (tighter spacing)</li>
+<li>Minimal visual elements</li>
+</ul>
+<div style="height:1px;border-top:1px dashed #e5e7eb;margin:18px 0;"></div>
+</details>
+<h4 id="span-id%22settings-application-order-priority%2257-settings-application-order-priorityspan"><span id="settings-application-order-priority">5.7 Settings Application Order (Priority)</span></h4>
+<p>When Power BI renders a visual, settings are applied in this order (later overrides earlier):</p>
+<ol>
+<li><strong>Global theme settings</strong> (Level 1) - Colors, text classes, semantic colors</li>
+<li><strong>General visual settings</strong> (Level 2) - Universal visual properties and page settings</li>
+<li><strong>Visual-specific defaults</strong> (Level 3) - <code>&quot;visualType&quot;: &quot;*&quot;</code></li>
+<li><strong>Visual preset overrides</strong> (Level 4) - <code>&quot;visualType&quot;: &quot;PresetName&quot;</code></li>
+<li><strong>User-level formatting</strong> (Manual edits in desktop application)</li>
+</ol>
+</details>
+<hr>
+<details open class="collapsible-section">
+<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="visual-name-reference">6. Visual Name Reference</span></summary>
+<div style="height:1px;background:#e5e7eb;margin:10px 0 18px;"></div>
+<p>Use this table to find the correct JSON key name for any Power BI visual when editing the theme file.</p>
+<table>
+<thead>
+<tr>
+<th>Visual</th>
+<th>JSON Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All visuals (defaults)</td>
+<td><code>*</code></td>
+</tr>
+<tr>
+<td>Action button</td>
+<td><code>actionButton</code></td>
+</tr>
+<tr>
+<td>Advanced slicer</td>
+<td><code>advancedSlicerVisual</code></td>
+</tr>
+<tr>
+<td>AI narratives</td>
+<td><code>aiNarratives</code></td>
+</tr>
+<tr>
+<td>Area chart</td>
+<td><code>areaChart</code></td>
+</tr>
+<tr>
+<td>Azure map</td>
+<td><code>azureMap</code></td>
+</tr>
+<tr>
+<td>Stacked bar chart</td>
+<td><code>barChart</code></td>
+</tr>
+<tr>
+<td>Bookmark navigator</td>
+<td><code>bookmarkNavigator</code></td>
+</tr>
+<tr>
+<td>Card</td>
+<td><code>card</code></td>
+</tr>
+<tr>
+<td>Clustered bar chart</td>
+<td><code>clusteredBarChart</code></td>
+</tr>
+<tr>
+<td>Clustered column chart</td>
+<td><code>clusteredColumnChart</code></td>
+</tr>
+<tr>
+<td>Stacked column chart</td>
+<td><code>columnChart</code></td>
+</tr>
+<tr>
+<td>Decomposition tree</td>
+<td><code>decompositionTreeVisual</code></td>
+</tr>
+<tr>
+<td>Donut chart</td>
+<td><code>donutChart</code></td>
+</tr>
+<tr>
+<td>Filled map</td>
+<td><code>filledMap</code></td>
+</tr>
+<tr>
+<td>Filter</td>
+<td><code>filter</code></td>
+</tr>
+<tr>
+<td>Funnel</td>
+<td><code>funnel</code></td>
+</tr>
+<tr>
+<td>Gauge</td>
+<td><code>gauge</code></td>
+</tr>
+<tr>
+<td>Group (container)</td>
+<td><code>group</code></td>
+</tr>
+<tr>
+<td>100% stacked area chart</td>
+<td><code>hundredPercentStackedAreaChart</code></td>
+</tr>
+<tr>
+<td>100% stacked bar chart</td>
+<td><code>hundredPercentStackedBarChart</code></td>
+</tr>
+<tr>
+<td>100% stacked column chart</td>
+<td><code>hundredPercentStackedColumnChart</code></td>
+</tr>
+<tr>
+<td>Image</td>
+<td><code>image</code></td>
+</tr>
+<tr>
+<td>Key influencers</td>
+<td><code>keyDriversVisual</code></td>
+</tr>
+<tr>
+<td>KPI</td>
+<td><code>kpi</code></td>
+</tr>
+<tr>
+<td>Line chart</td>
+<td><code>lineChart</code></td>
+</tr>
+<tr>
+<td>Line + clustered column combo</td>
+<td><code>lineClusteredColumnComboChart</code></td>
+</tr>
+<tr>
+<td>Line + stacked column combo</td>
+<td><code>lineStackedColumnComboChart</code></td>
+</tr>
+<tr>
+<td>List slicer</td>
+<td><code>listSlicer</code></td>
+</tr>
+<tr>
+<td>Map</td>
+<td><code>map</code></td>
+</tr>
+<tr>
+<td>Multi-row card</td>
+<td><code>multiRowCard</code></td>
+</tr>
+<tr>
+<td>Page</td>
+<td><code>page</code></td>
+</tr>
+<tr>
+<td>Page navigator</td>
+<td><code>pageNavigator</code></td>
+</tr>
+<tr>
+<td>Pie chart</td>
+<td><code>pieChart</code></td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td><code>pivotTable</code></td>
+</tr>
+<tr>
+<td>Python visual</td>
+<td><code>pythonVisual</code></td>
+</tr>
+<tr>
+<td>Q&amp;A visual</td>
+<td><code>qnaVisual</code></td>
+</tr>
+<tr>
+<td>RDL visual</td>
+<td><code>rdlVisual</code></td>
+</tr>
+<tr>
+<td>Report (report-level)</td>
+<td><code>report</code></td>
+</tr>
+<tr>
+<td>Ribbon chart</td>
+<td><code>ribbonChart</code></td>
+</tr>
+<tr>
+<td>Scatter chart</td>
+<td><code>scatterChart</code></td>
+</tr>
+<tr>
+<td>Scorecard</td>
+<td><code>scorecard</code></td>
+</tr>
+<tr>
+<td>Script visual</td>
+<td><code>scriptVisual</code></td>
+</tr>
+<tr>
+<td>Shape</td>
+<td><code>shape</code></td>
+</tr>
+<tr>
+<td>Shape map</td>
+<td><code>shapeMap</code></td>
+</tr>
+<tr>
+<td>Slicer</td>
+<td><code>slicer</code></td>
+</tr>
+<tr>
+<td>Stacked area chart</td>
+<td><code>stackedAreaChart</code></td>
+</tr>
+<tr>
+<td>Table (legacy)</td>
+<td><code>table</code></td>
+</tr>
+<tr>
+<td>Table (new)</td>
+<td><code>tableEx</code></td>
+</tr>
+<tr>
+<td>Text box</td>
+<td><code>textbox</code></td>
+</tr>
+<tr>
+<td>Text slicer</td>
+<td><code>textSlicer</code></td>
+</tr>
+<tr>
+<td>Treemap</td>
+<td><code>treemap</code></td>
+</tr>
+<tr>
+<td>Waterfall chart</td>
+<td><code>waterfallChart</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Gotcha</strong>: Some names don't match what you'd expect — <code>barChart</code> is actually the <strong>stacked</strong> bar chart, not the clustered one. <code>pivotTable</code> is the <strong>Matrix</strong> visual. <code>tableEx</code> is the <strong>new</strong> table (most reports use this). Always check this table if a change isn't applying.</p>
+</blockquote>
+</details>
+<hr>
+<details open class="collapsible-section">
+<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="how-to-customize-this-theme">7. How to Customize This Theme</span></summary>
+<div style="height:1px;background:#e5e7eb;margin:10px 0 18px;"></div>
+<p>Now that you understand the theme's <a href="#color-palette">color palette</a> (Section 3), <a href="#typography--text-classes">typography</a> (Section 4), <a href="#theme-file-structure">4-level file structure</a> (Section 5), and <a href="#visual-name-reference">visual JSON names</a> (Section 6), you're ready to customize it.</p>
+<p>There are <strong>two proven methods</strong> to customize the theme while maintaining consistency across all reports. Both work by editing the theme JSON file directly—the difference is how you discover property names and structure.</p>
+<h4 id="span-id%22what-youll-need%2271-what-youll-needspan"><span id="what-youll-need">7.1 What You'll Need</span></h4>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Custom_Theme_Styles.json</strong></td>
+<td>Your theme file (the one you're customizing)</td>
+</tr>
+<tr>
+<td><strong>reportThemeSchema-2.149.json</strong></td>
+<td>The property reference — enables autocomplete and validation</td>
+</tr>
+<tr>
+<td><strong>VS Code</strong></td>
+<td>Recommended editor (enables autocomplete with schema)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="span-id%22setting-up-vs-code%2272-setting-up-vs-code-for-autocompletespan"><span id="setting-up-vs-code">7.2 Setting Up VS Code for Autocomplete</span></h4>
+<p>Add this line at the top of your theme JSON file to enable IntelliSense:</p>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"$schema"</span>: <span class="hljs-string">"reportThemeSchema-2.149.json"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Custom_Theme"</span>
+}
+</div></code></pre>
+<p><strong>What this does</strong>: As you type, VS Code suggests valid property names with descriptions—no need to memorize or search the schema manually.</p>
+<blockquote>
+<p><strong>Key Microsoft References:</strong></p>
+<table>
+<thead>
+<tr>
+<th>What You're Looking For</th>
+<th>Where to Find It</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Which text class affects which element</td>
+<td><a href="https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-report-themes">Microsoft Theme Documentation</a></td>
+</tr>
+<tr>
+<td>What semantic colors (good/bad/neutral) apply to</td>
+<td>Same link above, section on structural colors</td>
+</tr>
+<tr>
+<td>Full property list</td>
+<td>The schema file itself (autocomplete shows all options)</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h4 id="span-id%22method-1-schema--editor-autocomplete%2273-method-1-schema--editor-autocompletespan"><span id="method-1-schema--editor-autocomplete">7.3 Method 1: Schema + Editor Autocomplete</span></h4>
+<p><strong>Best for</strong>: Exploring options interactively, discovering what's available, precise control</p>
+<p><strong>How It Works</strong>:</p>
+<ol>
+<li>Open your theme file in VS Code (with <code>$schema</code> reference)</li>
+<li>Start typing a property name → autocomplete shows options</li>
+<li>Navigate the suggestions to find what you need</li>
+<li>VS Code validates your JSON in real-time</li>
+</ol>
+<p><strong>Example — Change Card Visual Value Font Size:</strong></p>
+<p>Goal: Make card values larger (25pt instead of default)</p>
+<ol>
+<li>Navigate to the card visual section in your theme</li>
+<li>Type <code>&quot;labels&quot;</code> and autocomplete shows available properties</li>
+<li>Add the styling:</li>
+</ol>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"visualStyles"</span>: {
+    <span class="hljs-attr">"card"</span>: {
+      <span class="hljs-attr">"*"</span>: {
+        <span class="hljs-attr">"labels"</span>: [
+          {
+            <span class="hljs-attr">"fontSize"</span>: <span class="hljs-number">25</span>,
+            <span class="hljs-attr">"fontFamily"</span>: <span class="hljs-string">"wf_standard-font"</span>,
+            <span class="hljs-attr">"color"</span>: {
+              <span class="hljs-attr">"solid"</span>: {
+                <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#595B69"</span>
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+</div></code></pre>
+<blockquote>
+<p><strong>Reference</strong>: The visual name <code>&quot;card&quot;</code> comes from the <a href="#visual-name-reference">Visual Name Reference</a> table in Section 6. The color <code>#595B69</code> is the theme's primary text color — see <a href="#color-palette">Color Palette</a> (Section 3).</p>
+</blockquote>
+<p><strong>Example — Customize Table Column Headers:</strong></p>
+<p>Goal: Change table header font color and background</p>
+<ol>
+<li>Navigate to <code>visualStyles</code> → <code>tableEx</code> (the new table visual — see <a href="#visual-name-reference">Section 6</a>)</li>
+<li>Use autocomplete to find <code>columnHeaders</code> properties</li>
+<li>Add the styling:</li>
+</ol>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"visualStyles"</span>: {
+    <span class="hljs-attr">"tableEx"</span>: {
+      <span class="hljs-attr">"*"</span>: {
+        <span class="hljs-attr">"columnHeaders"</span>: [
+          {
+            <span class="hljs-attr">"fontColor"</span>: {
+              <span class="hljs-attr">"solid"</span>: {
+                <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#595B69"</span>
+              }
+            },
+            <span class="hljs-attr">"backColor"</span>: {
+              <span class="hljs-attr">"solid"</span>: {
+                <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#FFFFFF"</span>
+              }
+            },
+            <span class="hljs-attr">"fontFamily"</span>: <span class="hljs-string">"Calibri"</span>,
+            <span class="hljs-attr">"fontSize"</span>: <span class="hljs-number">11</span>,
+            <span class="hljs-attr">"bold"</span>: <span class="hljs-literal">true</span>
+          }
+        ]
+      }
+    }
+  }
+}
+</div></code></pre>
+<blockquote>
+<p><strong>Reference</strong>: This follows the Level 3 visual-specific structure described in <a href="#level-3-visual-specific-settings">Theme File Structure</a> (Section 5.5). The font <code>Calibri</code> is set as the theme default in <a href="#font-face">Typography</a> (Section 4.1).</p>
+</blockquote>
+<p>✅ Real-time validation catches errors immediately
+✅ Autocomplete shows ALL available options — no external tools needed
+❌ Requires navigating nested structures and knowing roughly where to look</p>
+<h4 id="span-id%22method-2-ai-assisted-with-schema%2274-method-2-ai-assisted-with-schemaspan"><span id="method-2-ai-assisted-with-schema">7.4 Method 2: AI-Assisted with Schema</span></h4>
+<p><strong>Best for</strong>: &quot;I want to change X but don't know where it is&quot;, bulk changes, learning the structure</p>
+<p><strong>How It Works</strong>:</p>
+<ol>
+<li>Describe what you want to change to an AI (ChatGPT, Copilot, Claude)</li>
+<li>Provide the schema file as reference</li>
+<li>AI generates the correct JSON structure</li>
+<li>Review, paste into your theme, test in Power BI</li>
+</ol>
+<p><strong>Example — Add Data Labels to Bar Charts:</strong></p>
+<p>What you tell AI:</p>
+<blockquote>
+<p>&quot;Using this Power BI theme schema, show me how to enable data labels on clustered bar charts with a light blue background (#E5EEFF) and bold dark text (#595B69). Include the exact JSON structure I need.&quot;</p>
+</blockquote>
+<p>AI generates:</p>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"visualStyles"</span>: {
+    <span class="hljs-attr">"clusteredBarChart"</span>: {
+      <span class="hljs-attr">"*"</span>: {
+        <span class="hljs-attr">"labels"</span>: [
+          {
+            <span class="hljs-attr">"show"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">"color"</span>: {
+              <span class="hljs-attr">"solid"</span>: {
+                <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#595B69"</span>
+              }
+            },
+            <span class="hljs-attr">"bold"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">"enableBackground"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">"backgroundColor"</span>: {
+              <span class="hljs-attr">"solid"</span>: {
+                <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#E5EEFF"</span>
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+</div></code></pre>
+<blockquote>
+<p><strong>Tip — Two ways to use AI:</strong></p>
+<ul>
+<li><strong>From scratch</strong>: Provide only the schema → AI returns minimal structure with just what you asked for</li>
+<li><strong>Modify existing</strong>: Provide your theme file + schema → AI returns your existing styling with the requested changes added</li>
+</ul>
+</blockquote>
+<p><strong>Example — Alternating Row Colors for Tables:</strong></p>
+<p>What you tell AI:</p>
+<blockquote>
+<p>&quot;Using this Power BI theme schema, show me how to set alternating row colors for the tableEx visual. Rows should be #EEF1F7 with Calibri 10pt bold in #595B69.&quot;</p>
+</blockquote>
+<p>AI generates:</p>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"visualStyles"</span>: {
+    <span class="hljs-attr">"tableEx"</span>: {
+      <span class="hljs-attr">"*"</span>: {
+        <span class="hljs-attr">"values"</span>: [
+          {
+            <span class="hljs-attr">"fontColorPrimary"</span>: {
+              <span class="hljs-attr">"solid"</span>: {
+                <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#595B69"</span>
+              }
+            },
+            <span class="hljs-attr">"backColorPrimary"</span>: {
+              <span class="hljs-attr">"solid"</span>: {
+                <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#EEF1F7"</span>
+              }
+            },
+            <span class="hljs-attr">"fontColorSecondary"</span>: {
+              <span class="hljs-attr">"solid"</span>: {
+                <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#595B69"</span>
+              }
+            },
+            <span class="hljs-attr">"backColorSecondary"</span>: {
+              <span class="hljs-attr">"solid"</span>: {
+                <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#EEF1F7"</span>
+              }
+            },
+            <span class="hljs-attr">"fontFamily"</span>: <span class="hljs-string">"Calibri"</span>,
+            <span class="hljs-attr">"fontSize"</span>: <span class="hljs-number">10</span>,
+            <span class="hljs-attr">"bold"</span>: <span class="hljs-literal">true</span>
+          }
+        ]
+      }
+    }
+  }
+}
+</div></code></pre>
+<p>✅ Fastest way to find complex property paths — AI explains what each property does
+✅ Great for bulk changes across multiple visuals
+❌ Must verify the output (AI can make mistakes with property names)</p>
+<h4 id="span-id%22tips--troubleshooting%2275-tips--troubleshootingspan"><span id="tips--troubleshooting">7.5 Tips &amp; Troubleshooting</span></h4>
+<p><strong>JSON Syntax Errors — Theme doesn't load:</strong></p>
+<ul>
+<li>Check VS Code's Problems panel (red squiggles)</li>
+<li>Ensure all braces <code>{}</code> and brackets <code>[]</code> match</li>
+<li>Check for missing commas between properties</li>
+<li>Properties in visual styles use arrays <code>[ ]</code> around objects — this is the most common mistake</li>
+</ul>
+<p><strong>Changes Not Appearing after editing:</strong></p>
+<ul>
+<li>Reload the theme: <strong>View → Themes → Browse for themes</strong></li>
+<li>Check property path is correct (visual name → <code>*</code> → property) — see <a href="#theme-file-structure">Theme File Structure</a> (Section 5) for the 4-level hierarchy</li>
+<li>Color properties require the <code>&quot;solid&quot;</code> → <code>&quot;color&quot;</code> nested structure:<pre class="hljs"><code><div><span class="hljs-string">"color"</span>: { <span class="hljs-attr">"solid"</span>: { <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#595B69"</span> } }
+</div></code></pre>
+</li>
+</ul>
+<p><strong>Not sure which visual name to use?</strong> See the <a href="#visual-name-reference">Visual Name Reference</a> table in Section 6.</p>
+<p><strong>Want to see complete working examples?</strong> Jump to <a href="#real-examples-by-visual-type">Real Examples by Visual Type</a> (Section 8) for copy-pasteable JSON blocks.</p>
+</details>
+<hr>
+<details open class="collapsible-section">
+<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="real-examples-by-visual-type">8. Real Examples by Visual Type</span></summary>
+<div style="height:1px;background:#e5e7eb;margin:10px 0 18px;"></div>
+<p>Each example shows the complete, copy-pasteable JSON structure. Place these inside the <code>&quot;visualStyles&quot;</code> object of your theme file.</p>
+<h4 id="span-id%22example-card%2281-card--value-font-size--category-labelspan"><span id="example-card">8.1 Card — Value Font Size &amp; Category Label</span></h4>
+<p><strong>Goal</strong>: Display card values at 25pt with a visible category label below</p>
+<pre class="hljs"><code><div><span class="hljs-string">"card"</span>: {
+  <span class="hljs-attr">"*"</span>: {
+    <span class="hljs-attr">"stylePreset"</span>: [
+      {
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"WithBackground"</span>
+      }
+    ],
+    <span class="hljs-attr">"labels"</span>: [
+      {
+        <span class="hljs-attr">"fontSize"</span>: <span class="hljs-number">25</span>,
+        <span class="hljs-attr">"fontFamily"</span>: <span class="hljs-string">"wf_standard-font"</span>,
+        <span class="hljs-attr">"color"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#595B69"</span>
+          }
+        }
+      }
+    ],
+    <span class="hljs-attr">"categoryLabels"</span>: [
+      {
+        <span class="hljs-attr">"show"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"fontSize"</span>: <span class="hljs-number">15</span>,
+        <span class="hljs-attr">"color"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#8793A3"</span>
+          }
+        }
+      }
+    ]
+  }
+}
+</div></code></pre>
+<blockquote>
+<p><strong>Why this matters</strong>: Without explicit <code>categoryLabels</code>, Power BI may hide the label or default to a small size. Setting <code>show: true</code> and a readable font size ensures users always see what the KPI represents.</p>
+</blockquote>
+<h4 id="span-id%22example-table%2282-table--headers-values--totalsspan"><span id="example-table">8.2 Table — Headers, Values &amp; Totals</span></h4>
+<p><strong>Goal</strong>: Style table headers (bold, white background), row values (alternating colors), and totals row</p>
+<pre class="hljs"><code><div><span class="hljs-string">"tableEx"</span>: {
+  <span class="hljs-attr">"*"</span>: {
+    <span class="hljs-attr">"stylePreset"</span>: [
+      {
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"WithBackground"</span>
+      }
+    ],
+    <span class="hljs-attr">"columnHeaders"</span>: [
+      {
+        <span class="hljs-attr">"fontColor"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#595B69"</span>
+          }
+        },
+        <span class="hljs-attr">"backColor"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#FFFFFF"</span>
+          }
+        },
+        <span class="hljs-attr">"fontFamily"</span>: <span class="hljs-string">"Calibri"</span>,
+        <span class="hljs-attr">"fontSize"</span>: <span class="hljs-number">11</span>,
+        <span class="hljs-attr">"bold"</span>: <span class="hljs-literal">true</span>
+      }
+    ],
+    <span class="hljs-attr">"values"</span>: [
+      {
+        <span class="hljs-attr">"fontColorPrimary"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#595B69"</span>
+          }
+        },
+        <span class="hljs-attr">"backColorPrimary"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#EEF1F7"</span>
+          }
+        },
+        <span class="hljs-attr">"fontColorSecondary"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#595B69"</span>
+          }
+        },
+        <span class="hljs-attr">"backColorSecondary"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#EEF1F7"</span>
+          }
+        },
+        <span class="hljs-attr">"fontFamily"</span>: <span class="hljs-string">"Calibri"</span>,
+        <span class="hljs-attr">"fontSize"</span>: <span class="hljs-number">10</span>,
+        <span class="hljs-attr">"bold"</span>: <span class="hljs-literal">true</span>
+      }
+    ],
+    <span class="hljs-attr">"total"</span>: [
+      {
+        <span class="hljs-attr">"totals"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"fontColor"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#595B69"</span>
+          }
+        },
+        <span class="hljs-attr">"backColor"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#EFEFEF"</span>
+          }
+        },
+        <span class="hljs-attr">"fontSize"</span>: <span class="hljs-number">11</span>,
+        <span class="hljs-attr">"bold"</span>: <span class="hljs-literal">true</span>
+      }
+    ]
+  }
+}
+</div></code></pre>
+<blockquote>
+<p><strong>Insight</strong>: Use <code>backColorPrimary</code> and <code>backColorSecondary</code> to create alternating row stripes. Setting them to the same color (#EEF1F7) gives a uniform look; use two different shades (e.g., #FFFFFF and #EEF1F7) for zebra striping.</p>
+</blockquote>
+<h4 id="span-id%22example-bar-chart%2283-bar-chart--data-labels--legendspan"><span id="example-bar-chart">8.3 Bar Chart — Data Labels &amp; Legend</span></h4>
+<p><strong>Goal</strong>: Show bold data labels with a light background, legend centered at top without title</p>
+<pre class="hljs"><code><div><span class="hljs-string">"clusteredBarChart"</span>: {
+  <span class="hljs-attr">"*"</span>: {
+    <span class="hljs-attr">"stylePreset"</span>: [
+      {
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"WithBackground"</span>
+      }
+    ],
+    <span class="hljs-attr">"layout"</span>: [
+      {
+        <span class="hljs-attr">"autoScaleVisualToFitFlexibleWidth"</span>: <span class="hljs-literal">false</span>
+      }
+    ],
+    <span class="hljs-attr">"labels"</span>: [
+      {
+        <span class="hljs-attr">"show"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"color"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#595B69"</span>
+          }
+        },
+        <span class="hljs-attr">"bold"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"enableBackground"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"backgroundColor"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#E5EEFF"</span>
+          }
+        }
+      }
+    ],
+    <span class="hljs-attr">"legend"</span>: [
+      {
+        <span class="hljs-attr">"showTitle"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"position"</span>: <span class="hljs-string">"TopCenter"</span>,
+        <span class="hljs-attr">"fontSize"</span>: <span class="hljs-number">10</span>
+      }
+    ]
+  }
+}
+</div></code></pre>
+<blockquote>
+<p><strong>Insight</strong>: <code>enableBackground: true</code> with a subtle <code>backgroundColor</code> makes data labels readable even when placed over bars. Without this, labels can be hard to read on certain data color fills.</p>
+</blockquote>
+<h4 id="span-id%22example-line-chart%2284-line-chart--line-styles--markersspan"><span id="example-line-chart">8.4 Line Chart — Line Styles &amp; Markers</span></h4>
+<p><strong>Goal</strong>: Smooth 4px lines with circle markers, matching legend colors</p>
+<pre class="hljs"><code><div><span class="hljs-string">"lineChart"</span>: {
+  <span class="hljs-attr">"*"</span>: {
+    <span class="hljs-attr">"stylePreset"</span>: [
+      {
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"WithBackground"</span>
+      }
+    ],
+    <span class="hljs-attr">"legend"</span>: [
+      {
+        <span class="hljs-attr">"legendMarkerRendering"</span>: <span class="hljs-string">"markerOnly"</span>,
+        <span class="hljs-attr">"matchLineColor"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"show"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"position"</span>: <span class="hljs-string">"TopCenter"</span>,
+        <span class="hljs-attr">"showTitle"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"fontSize"</span>: <span class="hljs-number">10</span>,
+        <span class="hljs-attr">"defaultToCircle"</span>: <span class="hljs-literal">true</span>
+      }
+    ],
+    <span class="hljs-attr">"labels"</span>: [
+      {
+        <span class="hljs-attr">"color"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#595B69"</span>
+          }
+        },
+        <span class="hljs-attr">"fontFamily"</span>: <span class="hljs-string">"wf_standard-font"</span>,
+        <span class="hljs-attr">"bold"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"show"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"enableBackground"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"backgroundColor"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#E5EEFF"</span>
+          }
+        },
+        <span class="hljs-attr">"backgroundTransparency"</span>: <span class="hljs-number">15</span>
+      }
+    ],
+    <span class="hljs-attr">"lineStyles"</span>: [
+      {
+        <span class="hljs-attr">"strokeWidth"</span>: <span class="hljs-number">4</span>,
+        <span class="hljs-attr">"lineStyle"</span>: <span class="hljs-string">"solid"</span>,
+        <span class="hljs-attr">"lineChartType"</span>: <span class="hljs-string">"smooth"</span>,
+        <span class="hljs-attr">"showMarker"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"markerShape"</span>: <span class="hljs-string">"circle"</span>,
+        <span class="hljs-attr">"markerSize"</span>: <span class="hljs-number">5</span>
+      }
+    ]
+  }
+}
+</div></code></pre>
+<blockquote>
+<p><strong>Insight</strong>: <code>matchLineColor: true</code> syncs legend marker colors with line colors automatically. <code>legendMarkerRendering: &quot;markerOnly&quot;</code> shows dots instead of line segments in the legend, which looks cleaner at small sizes.</p>
+</blockquote>
+<h4 id="span-id%22example-all-visuals%2285-all-visuals--default-title-border--paddingspan"><span id="example-all-visuals">8.5 All Visuals — Default Title, Border &amp; Padding</span></h4>
+<p><strong>Goal</strong>: Set consistent defaults for every visual in the report</p>
+<pre class="hljs"><code><div><span class="hljs-string">"*"</span>: {
+  <span class="hljs-attr">"*"</span>: {
+    <span class="hljs-attr">"title"</span>: [
+      {
+        <span class="hljs-attr">"show"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"alignment"</span>: <span class="hljs-string">"left"</span>,
+        <span class="hljs-attr">"titleWrap"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"fontFamily"</span>: <span class="hljs-string">"Calibri"</span>,
+        <span class="hljs-attr">"fontSize"</span>: <span class="hljs-number">12</span>,
+        <span class="hljs-attr">"fontColor"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#8793A3"</span>
+          }
+        },
+        <span class="hljs-attr">"bold"</span>: <span class="hljs-literal">false</span>
+      }
+    ],
+    <span class="hljs-attr">"border"</span>: [
+      {
+        <span class="hljs-attr">"show"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"radius"</span>: <span class="hljs-number">7</span>,
+        <span class="hljs-attr">"color"</span>: {
+          <span class="hljs-attr">"solid"</span>: {
+            <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#FFFFFF"</span>
+          }
+        }
+      }
+    ],
+    <span class="hljs-attr">"padding"</span>: [
+      {
+        <span class="hljs-attr">"top"</span>: <span class="hljs-number">10</span>,
+        <span class="hljs-attr">"bottom"</span>: <span class="hljs-number">10</span>,
+        <span class="hljs-attr">"left"</span>: <span class="hljs-number">10</span>,
+        <span class="hljs-attr">"right"</span>: <span class="hljs-number">10</span>
+      }
+    ]
+  }
+}
+</div></code></pre>
+<blockquote>
+<p><strong>Insight</strong>: These <code>&quot;*&quot;</code> → <code>&quot;*&quot;</code> defaults are the foundation of the theme. Any visual-specific setting (e.g., <code>&quot;card&quot;</code> → <code>&quot;*&quot;</code>) will override these values. This is why you can set a 12px title here but override it to 14px for cards specifically — the hierarchy handles it automatically.</p>
+</blockquote>
+</details>
+<hr>
+<details open class="collapsible-section">
+<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="quick-reference--notes">9. Quick Reference & Notes</span></summary>
+<div style="height:1px;background:#e5e7eb;margin:10px 0 18px;"></div>
+<h4 id="key-design-decisions-in-this-theme">Key Design Decisions in This Theme</h4>
+<table>
+<thead>
+<tr>
+<th>Decision</th>
+<th>Value</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Border radius</strong></td>
+<td>7px</td>
+<td>Modern card look without over-rounding</td>
+</tr>
+<tr>
+<td><strong>Padding</strong></td>
+<td>10px all sides</td>
+<td>Enough breathing room without wasting space</td>
+</tr>
+<tr>
+<td><strong>Value axis</strong></td>
+<td>Hidden</td>
+<td>Declutters charts — values are shown via data labels instead</td>
+</tr>
+<tr>
+<td><strong>Responsive layout</strong></td>
+<td>Disabled</td>
+<td>Ensures consistent layout across screen sizes and prevents Power BI from auto-resizing elements</td>
+</tr>
+<tr>
+<td><strong>Title font color</strong></td>
+<td>#8793A3 (gray)</td>
+<td>Keeps titles subtle so data stays prominent</td>
+</tr>
+<tr>
+<td><strong>Data label backgrounds</strong></td>
+<td>#E5EEFF (light blue)</td>
+<td>Makes labels readable on any bar/line color</td>
+</tr>
+</tbody>
+</table>
+<h4 id="color-quick-reference">Color Quick Reference</h4>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Color</th>
+<th>Hex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary text</td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#1C2632;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span> Dark Blue-Gray</td>
+<td>#1C2632</td>
+</tr>
+<tr>
+<td>Secondary text / titles</td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#8793A3;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span> Medium Gray</td>
+<td>#8793A3</td>
+</tr>
+<tr>
+<td>Data labels &amp; axis text</td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#595B69;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span> Dark Gray</td>
+<td>#595B69</td>
+</tr>
+<tr>
+<td>Main background</td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#F9F9F9;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span> Near White</td>
+<td>#F9F9F9</td>
+</tr>
+<tr>
+<td>Page background</td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#F6F8FB;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span> Light Blue-Gray</td>
+<td>#F6F8FB</td>
+</tr>
+<tr>
+<td>Table accent</td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#426871;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span> Dark Teal</td>
+<td>#426871</td>
+</tr>
+<tr>
+<td>Positive / Good</td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#09B39D;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span> Teal</td>
+<td>#09B39D</td>
+</tr>
+<tr>
+<td>Negative / Bad</td>
+<td><span style="display:inline-block;width:12px;height:12px;background-color:#c2255c;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span> Red-Pink</td>
+<td>#c2255c</td>
+</tr>
+</tbody>
+</table>
+<h4 id="file-metrics">File Metrics</h4>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Total Visual Types</strong></td>
+<td>40+</td>
+</tr>
+<tr>
+<td><strong>Total JSON Lines</strong></td>
+<td>~5,024</td>
+</tr>
+<tr>
+<td><strong>Primary Data Colors</strong></td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Semantic Status Colors</strong></td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Text Classes</strong></td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<h4 id="format-reference">Format Reference</h4>
+<ul>
+<li>All color values are in hexadecimal format (#RRGGBB)</li>
+<li>Measurements are in pixels unless noted (font sizes are in points)</li>
+<li>Transparency values: 0 = fully opaque, 100 = fully transparent</li>
+<li>Properties in <code>visualStyles</code> use arrays <code>[ ]</code> around objects — this is required</li>
+</ul>
+</details>
+<hr>
+<details open class="collapsible-section">
+<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="version--references">10. Version & References</span></summary>
+<div style="height:1px;background:#e5e7eb;margin:10px 0 18px;"></div>
+<h4 id="version-information">Version Information</h4>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Theme Name</strong></td>
+<td>Custom_Theme</td>
+</tr>
+<tr>
+<td><strong>Schema Version</strong></td>
+<td>2.149</td>
+</tr>
+<tr>
+<td><strong>Last Updated</strong></td>
+<td>January 2026</td>
+</tr>
+<tr>
+<td><strong>Compatible With</strong></td>
+<td>Power BI Desktop &amp; Service</td>
+</tr>
+<tr>
+<td><strong>Total Visualization Types</strong></td>
+<td>40+</td>
+</tr>
+</tbody>
+</table>
+<h4 id="references">References</h4>
+<h3 id="span-id%22microsoft-documentation---report-themes-in-power-bi-desktop%221-microsoft-documentation---report-themes-in-power-bi-desktopspan"><span id="microsoft-documentation---report-themes-in-power-bi-desktop">1. <a href="https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-report-themes">Microsoft Documentation - Report Themes in Power BI Desktop</a></span></h3>
+<p>Official Microsoft documentation on using report themes in Power BI Desktop. This resource covers how to apply, customize, and manage themes in Power BI, including importing custom JSON theme files.</p>
+<br>
+<h3 id="span-id%22numerro---power-bi-theme-inspiration%222-numerro---power-bi-theme-inspirationspan"><span id="numerro---power-bi-theme-inspiration">2. <a href="https://www.numerro.io/">Numerro - Power BI Theme Inspiration</a></span></h3>
+<p>This custom theme was inspired by and built using one of Numerro's professional Power BI themes as the foundation. Numerro provides high-quality, pre-designed themes for Power BI reports.</p>
+<br>
+<h3 id="span-id%22power-bi-theme-json-schema---github-repository%223-power-bi-theme-json-schema---github-repositoryspan"><span id="power-bi-theme-json-schema---github-repository">3. <a href="https://github.com/microsoft/powerbi-desktop-samples/blob/main/Report%20Theme%20JSON%20Schema/README.md">Power BI Theme JSON Schema - GitHub Repository</a></span></h3>
+<p>Official repository containing JSON schema files for validating Power BI report themes. This is the authoritative source for all possible properties, attributes, and structure of a theme file. Essential reference for advanced theme development and validation.</p>
+<br>
+<h3 id="span-id%22power-bi-theme-generator-by-point-gmbh%224-power-bi-theme-generator-by-point-gmbhspan"><span id="power-bi-theme-generator-by-point-gmbh">4. <a href="https://themegenerator.point-gmbh.com/en/Home">Power BI Theme Generator by Point GmbH</a></span></h3>
+<p>An interactive web-based tool for editing Power BI themes visually. Note: Style presets must be removed from the theme file for this tool to work properly. This tool provides a user-friendly interface for customizing colors, typography, and basic visual settings.</p>
+<br>
+<h3 id="span-id%22re-using-visual-formatting-across-power-bi-reports---sqlbi%225-re-using-visual-formatting-across-power-bi-reports---sqlbispan"><span id="re-using-visual-formatting-across-power-bi-reports---sqlbi">5. <a href="https://www.sqlbi.com/articles/re-using-visual-formatting-in-and-across-power-bi-reports/">Re-using Visual Formatting Across Power BI Reports - SQLBI</a></span></h3>
+<p>Comprehensive article by SQLBI explaining how to save development time by effectively using themes to apply consistent formatting across multiple reports and visuals. Covers best practices and strategies for theme-based formatting efficiency.</p>
+<br>
+</details>
+<p><strong>Documentation Created</strong>: January 2026
+<strong>Theme Name</strong>: Custom_Theme_Styles.json
+<strong>Purpose</strong>: Complete Power BI theme reference &amp; customization guide for enterprise dashboards and reports
+<strong>Version</strong>: 2.0 (Merged)</p>
+
+</body>
+</html>
