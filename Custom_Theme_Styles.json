@@ -106,7 +106,7 @@
             "fontFace": "Calibri"
         },
         "smallLightLabel": {
-            "color": "#595B69",
+            "color": "#49515B",
             "fontSize": 10
         },
         "largeLightLabel": {
@@ -117,7 +117,7 @@
             "fontFace": "Calibri"
         },
         "lightLabel": {
-            "color": "#595B69"
+            "color": "#49515B"
         },
         "smallLabel": {
             "fontSize": 10
@@ -319,7 +319,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "fontFamily": "wf_standard-font",
@@ -495,7 +495,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "show": true,
@@ -596,7 +596,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "show": true,
@@ -696,7 +696,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "show": true,
@@ -846,7 +846,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "fontSize": 10,
@@ -1002,7 +1002,7 @@
                         "show": true,
                         "fontColor": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "textSize": 11,
@@ -1016,7 +1016,7 @@
                         "fontFamily": "Calibri",
                         "fontColor": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         }
                     }
@@ -1092,6 +1092,154 @@
                 ]
             }
         },
+        "cardVisual": {
+            "*": {
+                "background": [
+                    {
+                        "show": false
+                    }
+                ],
+                "border": [
+                    {
+                        "show": false
+                    }
+                ],
+                "title": [
+                    {
+                        "show": false
+                    }
+                ],
+                "subTitle": [
+                    {
+                        "show": false
+                    }
+                ],
+                "divider": [
+                    {
+                        "show": false
+                    },
+                    {
+                        "$id": "default",
+                        "show": false
+                    }
+                ],
+                "image": [
+                    {
+                        "$id": "default",
+                        "show": true,
+                        "horizontalAlignment": "center",
+                        "verticalAlignment": "top",
+                        "position": "Top",
+                        "padding": 7,
+                        "imageAreaSize": 18,
+                        "rectangleRoundedCurve": 10
+                    }
+                ],
+                "layout": [
+                    {
+                        "calloutSize": 75,
+                        "alignment": "center",
+                        "contentOrder": "callout_image_referenceLabel"
+                    }
+                ],
+                "shapeCustomRectangle": [
+                    {
+                        "$id": "default",
+                        "tileShape": "rectangleRoundedByPixel",
+                        "rectangleRoundedCurve": 15
+                    }
+                ],
+                "fillCustom": [
+                    {
+                        "$id": "default",
+                        "fillColor":{
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        }
+                    }
+                ],
+                "outline": [
+                    {
+                        "$id": "default",
+                        "show": false
+                    }
+                ],
+                "value": [
+                    {
+                        "$id": "default",
+                        "fontSize": 25,
+                        "bold": true,
+                        "fontFamily": "wf_standard-font",
+                        "fontColor":{
+                            "solid": {
+                                "color": "#49515B"
+                            }
+                        },
+                        "horizontalAlignment": "center"
+                    }
+                ],
+                "label": [
+                    {
+                        "$id": "default",
+                        "position": "belowValue",
+                        "matchValueAlignment": true,
+                        "heading": "Heading4",
+                        "fontSize": 15,
+                        "fontColor":{
+                            "solid": {
+                                "color": "#8793A3"
+                            }
+                        }
+                    }
+                ],
+                "referenceLabel": [
+                    {
+                        "$id": "default",
+                        "backgroundColor":{
+                            "solid": {
+                                "color": "#E0E7F0"
+                            }
+                        }
+                    }
+                ],
+                "referenceLabelValue": [
+                    {
+                        "$id": "default",
+                        "valueFontSize": 12,
+                        "valueFontFamily": "wf_standard-font",
+                        "valueBold": true,
+                        "valueFontColor":{
+                            "solid": {
+                                "color": "#656E7A"
+                            }
+                        }
+                    }
+                ],
+                "referenceLabelTitle": [
+                    {
+                        "$id": "default",
+                        "show": true,
+                        "titleFontSize": 12,
+                        "titleFontColor":{
+                            "solid": {
+                                "color": "#656E7A"
+                            }
+                        }
+                    }
+                ],
+                "referenceLabelLayout": [
+                    {
+                        "$id": "default",
+                        "arrangement": "rows",
+                        "horizontalAlignment": "center",
+                        "verticalAlignment": "middle",
+                        "position": "below",
+                        "style": "sentence"
+                    }
+                ]
+            }
+        },
         "card": {
             "*": {
                 "stylePreset": [
@@ -1105,7 +1253,7 @@
                         "fontFamily": "wf_standard-font",
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         }
                     }
@@ -1216,7 +1364,7 @@
                     {
                         "fontColor": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "backColor": {
@@ -1237,7 +1385,7 @@
                     {
                         "fontColorPrimary": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "backColorPrimary": {
@@ -1247,7 +1395,7 @@
                         },
                         "fontColorSecondary": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "backColorSecondary": {
@@ -1267,7 +1415,7 @@
                         "totals": true,
                         "fontColor": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "backColor": {
@@ -1490,7 +1638,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "fontSize": 10,
@@ -1635,7 +1783,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "fontFamily": "wf_standard-font",
@@ -1788,7 +1936,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "fontFamily": "wf_standard-font",
@@ -1964,7 +2112,7 @@
                     {
                         "fontColor": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "backColor": {
@@ -1985,7 +2133,7 @@
                     {
                         "fontColor": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "backColor": {
@@ -2011,7 +2159,7 @@
                     {
                         "fontColorPrimary": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "backColorPrimary": {
@@ -2021,7 +2169,7 @@
                         },
                         "fontColorSecondary": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "backColorSecondary": {
@@ -2041,7 +2189,7 @@
                         "totals": false,
                         "fontColor": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "backColor": {
@@ -2061,7 +2209,7 @@
                         "totals": true,
                         "fontColor": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "backColor": {
@@ -2319,7 +2467,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "fontFamily": "wf_standard-font",
@@ -2328,7 +2476,7 @@
                         "fontSize": 10,
                         "detailColor": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "detailBold": true,
@@ -2420,7 +2568,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "show": true,
@@ -2429,7 +2577,7 @@
                         "bold": true,
                         "detailColor": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "detailBold": true,
@@ -2521,7 +2669,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "show": true,
@@ -2623,7 +2771,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "show": true,
@@ -2725,7 +2873,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "show": true,
@@ -2827,7 +2975,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "show": true,
@@ -2836,7 +2984,7 @@
                         "bold": true,
                         "detailColor": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "detailBold": true,
@@ -2977,7 +3125,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "show": true,
@@ -3066,7 +3214,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "show": true,
@@ -3156,7 +3304,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "show": true,
@@ -3246,7 +3394,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "show": true,
@@ -3421,7 +3569,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "show": true,
@@ -3736,7 +3884,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "fontSize": 10,
@@ -4454,7 +4602,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         },
                         "fontSize": 14,
@@ -4630,7 +4778,7 @@
                         "bold": true,
                         "fontColor": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         }
                     }
@@ -4741,7 +4889,7 @@
                         "bold": true,
                         "fontColor": {
                             "solid": {
-                                "color": "#595B69"
+                                "color": "#49515B"
                             }
                         }
                     }
