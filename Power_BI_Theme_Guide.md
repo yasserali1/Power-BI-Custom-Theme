@@ -842,13 +842,14 @@ Use this table to find the correct JSON key name for any Power BI visual when ed
 |--------|-----------|
 | All visuals (defaults) | `*` |
 | Action button | `actionButton` |
-| Advanced slicer | `advancedSlicerVisual` |
+| Button slicer | `advancedSlicerVisual` |
 | AI narratives | `aiNarratives` |
 | Area chart | `areaChart` |
 | Azure map | `azureMap` |
 | Stacked bar chart | `barChart` |
 | Bookmark navigator | `bookmarkNavigator` |
-| Card | `card` |
+| Card (legacy) | `card` |
+| Card (new) | `cardVisual` |
 | Clustered bar chart | `clusteredBarChart` |
 | Clustered column chart | `clusteredColumnChart` |
 | Stacked column chart | `columnChart` |
@@ -894,7 +895,7 @@ Use this table to find the correct JSON key name for any Power BI visual when ed
 | Treemap | `treemap` |
 | Waterfall chart | `waterfallChart` |
 
-> **Gotcha**: Some names don't match what you'd expect — `barChart` is actually the **stacked** bar chart, not the clustered one. `pivotTable` is the **Matrix** visual. `tableEx` is the **new** table (most reports use this). Always check this table if a change isn't applying.
+> **Gotcha**: Some names don't match what you'd expect — `barChart` is actually the **stacked** bar chart, not the clustered one. `pivotTable` is the **Matrix** visual. `tableEx` is the **new** table (most reports use this). `card` is the **legacy** card visual, while `cardVisual` is the **new** card visual introduced in recent Power BI updates. Always check this table if a change isn't applying.
 
 </details>
 
