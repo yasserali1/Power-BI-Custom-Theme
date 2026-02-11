@@ -4801,9 +4801,17 @@
                         "bold": true,
                         "fontColor": {
                             "solid": {
-                                "color": "#49515B"
+                                "color": "#8793A3"
                             }
-                        }
+                        },
+                        "topMargin": 4,
+                        "bottomMargin": 4,
+                        "rightMargin": 4,
+                        "leftMargin": 4
+                    },
+                    {
+                        "$id": "hover",
+                        "bottomMargin": 9
                     }
                 ],
                 "accentBar": [
@@ -4824,7 +4832,7 @@
                         "$id": "default",
                         "fillColor": {
                             "solid": {
-                                "color": "#F3F3F3"
+                                "color": "#F1F2F4"
                             }
                         }
                     },
@@ -4909,10 +4917,14 @@
                 "text": [
                     {
                         "$id": "default",
+                        "topMargin": 4,
+                        "bottomMargin": 4,
+                        "leftMargin": 4,
+                        "rightMargin": 4,
                         "bold": true,
                         "fontColor": {
                             "solid": {
-                                "color": "#49515B"
+                                "color": "#8793A3"
                             }
                         }
                     }
@@ -4935,7 +4947,7 @@
                         "$id": "default",
                         "fillColor": {
                             "solid": {
-                                "color": "#F3F3F3"
+                                "color": "#F1F2F4"
                             }
                         }
                     },
@@ -4998,6 +5010,12 @@
                         "orientation": 2
                     }
                 ],
+                "text": [
+                    {
+                        "$id": "hover",
+                        "bottomMargin": 9
+                    }
+                ],
                 "accentBar": [
                     {
                         "$id": "default",
@@ -5019,11 +5037,17 @@
                         "orientation": 1
                     }
                 ],
+                "text": [
+                    {
+                        "$id": "hover",
+                        "leftMargin": 9
+                    }
+                ],
                 "accentBar": [
                     {
                         "$id": "default",
                         "show": true,
-                        "width": 4,
+                        "width": 2,
                         "position": "Left",
                         "color": {
                             "solid": {

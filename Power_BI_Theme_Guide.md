@@ -132,8 +132,8 @@ The theme includes 15 custom SVG icons for use in Power BI reports and filters.
     <div style="margin-top:8px;font-size:12px;color:#374151;">#D7A767<br><span style="color:#6b7280;">Data 3</span></div>
   </div>
   <div>
-    <div style="width:140px;height:44px;border-radius:8px;background:#DC7653;border:1px solid #e1e5ee;"></div>
-    <div style="margin-top:8px;font-size:12px;color:#374151;">#DC7653<br><span style="color:#6b7280;">Data 4</span></div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#C47832;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#C47832<br><span style="color:#6b7280;">Data 4</span></div>
   </div>
   <div>
     <div style="width:140px;height:44px;border-radius:8px;background:#8783FF;border:1px solid #e1e5ee;"></div>
@@ -285,7 +285,7 @@ The Custom_Theme_Styles.json file follows a hierarchical structure with four mai
 | **1** | Global Theme Settings | • Colors (8 data, 3 semantic, scale)<br>• Foreground/background colors<br>• Text classes (12 typography styles) |
 | **2** | General Visual Settings | • Universal visual properties<br>• Page background & outspace<br>• Default spacing & padding |
 | **3** | Visual-Specific Settings | • Individual visual type configs<br>• lineChart, pieChart, slicer, table<br>• 40+ visualization types |
-| **4** | Preset Styles | • WithBackground (modern style)<br>• WithoutBackground (minimal style)<br>• Visual chrome & spacing overrides |
+| **4** | Preset Styles | • WithBackground (modern style)<br>• WithoutBackground (minimal style)<br>• VerticalWithoutBackground (button slicer)<br>• HorizontalWithoutBackground (button slicer)<br>• Visual chrome & spacing overrides |
 
 **Hierarchy Flow**: Level 1 → Level 2 → Level 3 → Level 4 (each level refines and overrides previous settings)
 
@@ -358,6 +358,29 @@ Custom_Theme_Styles.json
         │     ├─ title[]
         │     ├─ padding[]
         │     └─ ... (preset overrides)
+        │
+        ├─ advancedSlicerVisual (LEVEL 3: VISUAL-SPECIFIC - Button Slicer)
+        │  ├─ "*" (Default settings)
+        │  │  ├─ stylePreset[]
+        │  │  ├─ selection[]
+        │  │  ├─ value[]
+        │  │  ├─ label[]
+        │  │  ├─ shapeCustomRectangle[]
+        │  │  ├─ outline[]
+        │  │  └─ fillCustom[]
+        │  │
+        │  ├─ WithBackground (LEVEL 4: PRESET STYLE)
+        │  ├─ WithoutBackground (LEVEL 4: PRESET STYLE)
+        │  ├─ VerticalWithoutBackground (LEVEL 4: PRESET STYLE)
+        │  │  ├─ layout[]
+        │  │  ├─ accentBar[]
+        │  │  └─ padding[]
+        │  │
+        │  └─ HorizontalWithoutBackground (LEVEL 4: PRESET STYLE - Default)
+        │     ├─ value[]
+        │     ├─ layout[]
+        │     ├─ accentBar[]
+        │     └─ padding[]
         │
         ├─ clusteredColumnChart
         ├─ pieChart
@@ -812,6 +835,116 @@ Style presets (the final level) allow different visual appearances for the same 
 - Hidden title/subtitle
 - 5px padding (tighter spacing)
 - Minimal visual elements
+
+#### <span id="verticalwithoutbackground-preset">5.6.3 VerticalWithoutBackground Preset (Button Slicer)</span>
+
+This preset is specific to the **Button slicer** (`advancedSlicerVisual`). It arranges slicer items in a vertical card layout with a left accent bar and hover interaction.
+
+```json
+"VerticalWithoutBackground": {
+  "layout": [
+    {
+      "autoGrid": true,
+      "orientation": 1,
+      "maxTiles": 6,
+      "style": "Cards"
+    }
+  ],
+  "accentBar": [
+    {
+      "$id": "default",
+      "show": true,
+      "position": "Left",
+      "width": 2,
+      "color": {
+        "solid": {
+          "color": "#1C2632"
+        }
+      }
+    }
+  ],
+  "padding": [
+    {
+      "left": 5, "right": 5, "bottom": 5, "top": 5
+    },
+    {
+      "$id": "default",
+      "paddingSelection": "Custom",
+      "leftMargin": 10
+    },
+    {
+      "$id": "interaction:hover",
+      "paddingSelection": "Custom",
+      "leftMargin": 15
+    }
+  ]
+}
+```
+
+**Characteristics**:
+- Vertical card layout with auto-grid (max 6 tiles)
+- Left accent bar (2px, dark blue-gray <span style="display:inline-block;width:12px;height:12px;background-color:#1C2632;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#1C2632)
+- 10px left margin by default, increasing to 15px on hover (slide-in effect)
+- No background, border, title, subtitle, or divider
+
+#### <span id="horizontalwithoutbackground-preset">5.6.4 HorizontalWithoutBackground Preset (Button Slicer — Default)</span>
+
+This preset is specific to the **Button slicer** (`advancedSlicerVisual`) and is set as the **default style** via `stylePreset`. It arranges slicer items horizontally with a bottom accent bar and hover interaction.
+
+```json
+"HorizontalWithoutBackground": {
+  "value": [
+    {
+      "$id": "default",
+      "horizontalAlignment": "center"
+    }
+  ],
+  "layout": [
+    {
+      "autoGrid": true,
+      "orientation": 2,
+      "maxTiles": 6,
+      "style": "Cards"
+    }
+  ],
+  "accentBar": [
+    {
+      "$id": "default",
+      "show": true,
+      "position": "Bottom",
+      "width": 2,
+      "color": {
+        "solid": {
+          "color": "#1C2632"
+        }
+      }
+    }
+  ],
+  "padding": [
+    {
+      "left": 5, "right": 5, "bottom": 5, "top": 5
+    },
+    {
+      "$id": "default",
+      "paddingSelection": "Normal"
+    },
+    {
+      "$id": "interaction:hover",
+      "paddingSelection": "Custom",
+      "bottomMargin": 15
+    }
+  ]
+}
+```
+
+**Characteristics**:
+- Horizontal card layout with auto-grid (max 6 tiles)
+- Center-aligned values
+- Bottom accent bar (2px, dark blue-gray <span style="display:inline-block;width:12px;height:12px;background-color:#1C2632;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#1C2632)
+- Normal padding by default, 15px bottom margin on hover (drop-down effect)
+- No background, border, title, subtitle, or divider
+
+> **Note**: The button slicer's default settings (`"*"`) also configure multi-select, custom rectangle shape (7px rounded), value/label font colors with selection states (<span style="display:inline-block;width:12px;height:12px;background-color:#8793A3;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#8793A3 default, <span style="display:inline-block;width:12px;height:12px;background-color:#F9F9F9;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#F9F9F9 selected value, <span style="display:inline-block;width:12px;height:12px;background-color:#B6DDEE;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#B6DDEE selected label), and a light gray fill (<span style="display:inline-block;width:12px;height:12px;background-color:#F1F2F4;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#F1F2F4).
 
 <div style="height:1px;border-top:1px dashed #e5e7eb;margin:18px 0;"></div>
 

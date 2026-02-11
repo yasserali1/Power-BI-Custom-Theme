@@ -554,8 +554,8 @@ code {
     <div style="margin-top:8px;font-size:12px;color:#374151;">#D7A767<br><span style="color:#6b7280;">Data 3</span></div>
   </div>
   <div>
-    <div style="width:140px;height:44px;border-radius:8px;background:#DC7653;border:1px solid #e1e5ee;"></div>
-    <div style="margin-top:8px;font-size:12px;color:#374151;">#DC7653<br><span style="color:#6b7280;">Data 4</span></div>
+    <div style="width:140px;height:44px;border-radius:8px;background:#C47832;border:1px solid #e1e5ee;"></div>
+    <div style="margin-top:8px;font-size:12px;color:#374151;">#C47832<br><span style="color:#6b7280;">Data 4</span></div>
   </div>
   <div>
     <div style="width:140px;height:44px;border-radius:8px;background:#8783FF;border:1px solid #e1e5ee;"></div>
@@ -888,7 +888,7 @@ For complete details on text class usage and formatting options, see <a href="ht
 <tr>
 <td><strong>4</strong></td>
 <td>Preset Styles</td>
-<td>• WithBackground (modern style)<br>• WithoutBackground (minimal style)<br>• Visual chrome &amp; spacing overrides</td>
+<td>• WithBackground (modern style)<br>• WithoutBackground (minimal style)<br>• VerticalWithoutBackground (button slicer)<br>• HorizontalWithoutBackground (button slicer)<br>• Visual chrome &amp; spacing overrides</td>
 </tr>
 </tbody>
 </table>
@@ -960,6 +960,29 @@ For complete details on text class usage and formatting options, see <a href="ht
         │     ├─ title[]
         │     ├─ padding[]
         │     └─ ... (preset overrides)
+        │
+        ├─ advancedSlicerVisual (LEVEL 3: VISUAL-SPECIFIC - Button Slicer)
+        │  ├─ &quot;*&quot; (Default settings)
+        │  │  ├─ stylePreset[]
+        │  │  ├─ selection[]
+        │  │  ├─ value[]
+        │  │  ├─ label[]
+        │  │  ├─ shapeCustomRectangle[]
+        │  │  ├─ outline[]
+        │  │  └─ fillCustom[]
+        │  │
+        │  ├─ WithBackground (LEVEL 4: PRESET STYLE)
+        │  ├─ WithoutBackground (LEVEL 4: PRESET STYLE)
+        │  ├─ VerticalWithoutBackground (LEVEL 4: PRESET STYLE)
+        │  │  ├─ layout[]
+        │  │  ├─ accentBar[]
+        │  │  └─ padding[]
+        │  │
+        │  └─ HorizontalWithoutBackground (LEVEL 4: PRESET STYLE - Default)
+        │     ├─ value[]
+        │     ├─ layout[]
+        │     ├─ accentBar[]
+        │     └─ padding[]
         │
         ├─ clusteredColumnChart
         ├─ pieChart
@@ -1412,6 +1435,111 @@ For complete details on text class usage and formatting options, see <a href="ht
 <li>5px padding (tighter spacing)</li>
 <li>Minimal visual elements</li>
 </ul>
+<h4 id="span-id%22verticalwithoutbackground-preset%22563-verticalwithoutbackground-preset-button-slicerspan"><span id="verticalwithoutbackground-preset">5.6.3 VerticalWithoutBackground Preset (Button Slicer)</span></h4>
+<p>This preset is specific to the <strong>Button slicer</strong> (<code>advancedSlicerVisual</code>). It arranges slicer items in a vertical card layout with a left accent bar and hover interaction.</p>
+<pre class="hljs"><code><div><span class="hljs-string">"VerticalWithoutBackground"</span>: {
+  <span class="hljs-attr">"layout"</span>: [
+    {
+      <span class="hljs-attr">"autoGrid"</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">"orientation"</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-attr">"maxTiles"</span>: <span class="hljs-number">6</span>,
+      <span class="hljs-attr">"style"</span>: <span class="hljs-string">"Cards"</span>
+    }
+  ],
+  <span class="hljs-attr">"accentBar"</span>: [
+    {
+      <span class="hljs-attr">"$id"</span>: <span class="hljs-string">"default"</span>,
+      <span class="hljs-attr">"show"</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">"position"</span>: <span class="hljs-string">"Left"</span>,
+      <span class="hljs-attr">"width"</span>: <span class="hljs-number">2</span>,
+      <span class="hljs-attr">"color"</span>: {
+        <span class="hljs-attr">"solid"</span>: {
+          <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#1C2632"</span>
+        }
+      }
+    }
+  ],
+  <span class="hljs-attr">"padding"</span>: [
+    {
+      <span class="hljs-attr">"left"</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">"right"</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">"bottom"</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">"top"</span>: <span class="hljs-number">5</span>
+    },
+    {
+      <span class="hljs-attr">"$id"</span>: <span class="hljs-string">"default"</span>,
+      <span class="hljs-attr">"paddingSelection"</span>: <span class="hljs-string">"Custom"</span>,
+      <span class="hljs-attr">"leftMargin"</span>: <span class="hljs-number">10</span>
+    },
+    {
+      <span class="hljs-attr">"$id"</span>: <span class="hljs-string">"interaction:hover"</span>,
+      <span class="hljs-attr">"paddingSelection"</span>: <span class="hljs-string">"Custom"</span>,
+      <span class="hljs-attr">"leftMargin"</span>: <span class="hljs-number">15</span>
+    }
+  ]
+}
+</div></code></pre>
+<p><strong>Characteristics</strong>:</p>
+<ul>
+<li>Vertical card layout with auto-grid (max 6 tiles)</li>
+<li>Left accent bar (2px, dark blue-gray <span style="display:inline-block;width:12px;height:12px;background-color:#1C2632;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#1C2632)</li>
+<li>10px left margin by default, increasing to 15px on hover (slide-in effect)</li>
+<li>No background, border, title, subtitle, or divider</li>
+</ul>
+<h4 id="span-id%22horizontalwithoutbackground-preset%22564-horizontalwithoutbackground-preset-button-slicer--defaultspan"><span id="horizontalwithoutbackground-preset">5.6.4 HorizontalWithoutBackground Preset (Button Slicer &mdash; Default)</span></h4>
+<p>This preset is specific to the <strong>Button slicer</strong> (<code>advancedSlicerVisual</code>) and is set as the <strong>default style</strong> via <code>stylePreset</code>. It arranges slicer items horizontally with a bottom accent bar and hover interaction.</p>
+<pre class="hljs"><code><div><span class="hljs-string">"HorizontalWithoutBackground"</span>: {
+  <span class="hljs-attr">"value"</span>: [
+    {
+      <span class="hljs-attr">"$id"</span>: <span class="hljs-string">"default"</span>,
+      <span class="hljs-attr">"horizontalAlignment"</span>: <span class="hljs-string">"center"</span>
+    }
+  ],
+  <span class="hljs-attr">"layout"</span>: [
+    {
+      <span class="hljs-attr">"autoGrid"</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">"orientation"</span>: <span class="hljs-number">2</span>,
+      <span class="hljs-attr">"maxTiles"</span>: <span class="hljs-number">6</span>,
+      <span class="hljs-attr">"style"</span>: <span class="hljs-string">"Cards"</span>
+    }
+  ],
+  <span class="hljs-attr">"accentBar"</span>: [
+    {
+      <span class="hljs-attr">"$id"</span>: <span class="hljs-string">"default"</span>,
+      <span class="hljs-attr">"show"</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">"position"</span>: <span class="hljs-string">"Bottom"</span>,
+      <span class="hljs-attr">"width"</span>: <span class="hljs-number">2</span>,
+      <span class="hljs-attr">"color"</span>: {
+        <span class="hljs-attr">"solid"</span>: {
+          <span class="hljs-attr">"color"</span>: <span class="hljs-string">"#1C2632"</span>
+        }
+      }
+    }
+  ],
+  <span class="hljs-attr">"padding"</span>: [
+    {
+      <span class="hljs-attr">"left"</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">"right"</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">"bottom"</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">"top"</span>: <span class="hljs-number">5</span>
+    },
+    {
+      <span class="hljs-attr">"$id"</span>: <span class="hljs-string">"default"</span>,
+      <span class="hljs-attr">"paddingSelection"</span>: <span class="hljs-string">"Normal"</span>
+    },
+    {
+      <span class="hljs-attr">"$id"</span>: <span class="hljs-string">"interaction:hover"</span>,
+      <span class="hljs-attr">"paddingSelection"</span>: <span class="hljs-string">"Custom"</span>,
+      <span class="hljs-attr">"bottomMargin"</span>: <span class="hljs-number">15</span>
+    }
+  ]
+}
+</div></code></pre>
+<p><strong>Characteristics</strong>:</p>
+<ul>
+<li>Horizontal card layout with auto-grid (max 6 tiles)</li>
+<li>Center-aligned values</li>
+<li>Bottom accent bar (2px, dark blue-gray <span style="display:inline-block;width:12px;height:12px;background-color:#1C2632;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#1C2632)</li>
+<li>Normal padding by default, 15px bottom margin on hover (drop-down effect)</li>
+<li>No background, border, title, subtitle, or divider</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: The button slicer's default settings (<code>&quot;*&quot;</code>) also configure multi-select, custom rectangle shape (7px rounded), value/label font colors with selection states (<span style="display:inline-block;width:12px;height:12px;background-color:#8793A3;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#8793A3 default, <span style="display:inline-block;width:12px;height:12px;background-color:#F9F9F9;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#F9F9F9 selected value, <span style="display:inline-block;width:12px;height:12px;background-color:#B6DDEE;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#B6DDEE selected label), and a light gray fill (<span style="display:inline-block;width:12px;height:12px;background-color:#F1F2F4;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#F1F2F4).</p>
+</blockquote>
 <div style="height:1px;border-top:1px dashed #e5e7eb;margin:18px 0;"></div>
 </details>
 <h4 id="span-id%22settings-application-order-priority%2257-settings-application-order-priorityspan"><span id="settings-application-order-priority">5.7 Settings Application Order (Priority)</span></h4>
