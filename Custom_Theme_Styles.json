@@ -1,7 +1,7 @@
 ﻿{
     "name": "Custom_Theme_Styles_v1.0",
     "$schema": "reportThemeSchema-2.149.json",
-     "icons": {
+    "icons": {
         "arrow-circle-down-bad": {
             "description": "Arrow down in dark red circle (light mode)",
             "url": "data:image/svg+xml;utf8,<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(%23clip0_951_46030)\"><path d=\"M7.99967 14.6668C11.6815 14.6668 14.6663 11.682 14.6663 8.00016C14.6663 4.31826 11.6815 1.3335 7.99967 1.3335C4.31777 1.3335 1.33301 4.31826 1.33301 8.00016C1.33301 11.682 4.31777 14.6668 7.99967 14.6668Z\" fill=\"%23F5E9EC\" stroke=\"%23c2255c\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M8.00033 5.3335V10.6668M8.00033 10.6668L10.3337 8.3335M8.00033 10.6668L5.66699 8.3335\" stroke=\"%23c2255c\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"clip0_951_46030\"><rect width=\"16\" height=\"16\" fill=\"white\"/></clipPath></defs></svg>"
@@ -14,7 +14,7 @@
             "description": "Arrow right in grey circle (light mode)",
             "url": "data:image/svg+xml;utf8,<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(%23clip0_951_46033)\"><path d=\"M7.99967 14.6668C11.6815 14.6668 14.6663 11.682 14.6663 8.00016C14.6663 4.31826 11.6815 1.3335 7.99967 1.3335C4.31777 1.3335 1.33301 4.31826 1.33301 8.00016C1.33301 11.682 4.31777 14.6668 7.99967 14.6668Z\" fill=\"%23F4F4F4\" stroke=\"%23404040\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M5.33301 7.99984H10.6663M10.6663 7.99984L8.33301 5.6665M10.6663 7.99984L8.33301 10.3332\" stroke=\"%23404040\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"clip0_951_46033\"><rect width=\"16\" height=\"16\" fill=\"white\"/></clipPath></defs></svg>"
         },
-        "arrow-circle-up-bad": {    
+        "arrow-circle-up-bad": {
             "description": "Arrow up in dark red circle (light mode)",
             "url": "data:image/svg+xml;utf8,<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(%23clip0_952_46052)\"><path d=\"M7.99967 14.6668C11.6815 14.6668 14.6663 11.682 14.6663 8.00016C14.6663 4.31826 11.6815 1.3335 7.99967 1.3335C4.31777 1.3335 1.33301 4.31826 1.33301 8.00016C1.33301 11.682 4.31777 14.6668 7.99967 14.6668Z\" fill=\"%23F5E9EC\" stroke=\"%23c2255c\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M8.00033 10.6668V5.3335M8.00033 5.3335L10.3337 7.66683M8.00033 5.3335L5.66699 7.66683\" stroke=\"%23c2255c\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"clip0_952_46052\"><rect width=\"16\" height=\"16\" fill=\"white\"/></clipPath></defs></svg>"
         },
@@ -72,7 +72,6 @@
         "#1C2632",
         "#8793A3",
         "#DBDFE4",
-
         "#3B5E94",
         "#E6C25D",
         "#6A4D8A",
@@ -1176,7 +1175,7 @@
                 "fillCustom": [
                     {
                         "$id": "default",
-                        "fillColor":{
+                        "fillColor": {
                             "solid": {
                                 "color": "#FFFFFF"
                             }
@@ -1195,7 +1194,7 @@
                         "fontSize": 25,
                         "bold": true,
                         "fontFamily": "wf_standard-font",
-                        "fontColor":{
+                        "fontColor": {
                             "solid": {
                                 "color": "#49515B"
                             }
@@ -1210,7 +1209,7 @@
                         "matchValueAlignment": true,
                         "heading": "Heading4",
                         "fontSize": 15,
-                        "fontColor":{
+                        "fontColor": {
                             "solid": {
                                 "color": "#8793A3"
                             }
@@ -1220,7 +1219,7 @@
                 "referenceLabel": [
                     {
                         "$id": "default",
-                        "backgroundColor":{
+                        "backgroundColor": {
                             "solid": {
                                 "color": "#E0E7F0"
                             }
@@ -1233,7 +1232,7 @@
                         "valueFontSize": 12,
                         "valueFontFamily": "wf_standard-font",
                         "valueBold": true,
-                        "valueFontColor":{
+                        "valueFontColor": {
                             "solid": {
                                 "color": "#656E7A"
                             }
@@ -1245,7 +1244,7 @@
                         "$id": "default",
                         "show": true,
                         "titleFontSize": 12,
-                        "titleFontColor":{
+                        "titleFontColor": {
                             "solid": {
                                 "color": "#656E7A"
                             }
@@ -2170,7 +2169,7 @@
                         "bold": true,
                         "outlineStyle": 2,
                         "outlineWeight": 3,
-                        "outlineColor":{
+                        "outlineColor": {
                             "solid": {
                                 "color": "#8793A3"
                             }
@@ -5160,36 +5159,79 @@
             "*": {
                 "stylePreset": [
                     {
-                        "name": "WithBackground"
+                        "name": "HorizontalWithoutBackground"
                     }
                 ],
-                "header": [
+                "selection": [
                     {
-                        "show": true,
+                        "singleSelect": false,
+                        "selectAllCheckboxEnabled": true
+                    }
+                ],
+                "value": [
+                    {
+                        "$id": "default",
                         "fontSize": 11,
+                        "fontColor": {
+                            "solid": {
+                                "color": "#8793A3"
+                            }
+                        }
+                    },
+                    {
+                        "$id": "selection",
+                        "fontColor": {
+                            "solid": {
+                                "color": "#F9F9F9"
+                            }
+                        }
+                    }
+                ],
+                "label": [
+                    {
+                        "$id": "default",
+                        "show": true,
                         "fontFamily": "wf_standard-font",
-                        "bold": true
-                    }
-                ],
-                "items": [
+                        "fontSize": 11,
+                        "bold": true,
+                        "fontColor": {
+                            "solid": {
+                                "color": "#8793A3"
+                            }
+                        }
+                    },
                     {
-                        "fontSize": 10,
-                        "fontFamily": "wf_standard-font"
+                        "$id": "selection:selected",
+                        "show": true,
+                        "fontFamily": "wf_standard-font",
+                        "fontSize": 11,
+                        "bold": true,
+                        "fontColor": {
+                            "solid": {
+                                "color": "#B6DDEE"
+                            }
+                        }
                     }
                 ],
-                "title": [
+                "shapeCustomRectangle": [
+                    {
+                        "tileShape": "rectangleRoundedByPixel",
+                        "rectangleRoundedCurve": 7
+                    }
+                ],
+                "outline": [
                     {
                         "show": false
                     }
                 ],
-                "subTitle": [
+                "fillCustom": [
                     {
-                        "show": false
-                    }
-                ],
-                "divider": [
-                    {
-                        "show": false
+                        "$id": "default",
+                        "fillColor": {
+                            "solid": {
+                                "color": "#F1F2F4"
+                            }
+                        }
                     }
                 ]
             },
@@ -5243,6 +5285,143 @@
                         "right": 5,
                         "bottom": 5,
                         "top": 5
+                    }
+                ]
+            },
+            "VerticalWithoutBackground": {
+                "layout": [
+                    {
+                        "autoGrid": true,
+                        "orientation": 1,
+                        "maxTiles": 6,
+                        "style": "Cards"
+                    }
+                ],
+                "accentBar": [
+                    {
+                        "$id": "default",
+                        "show": true,
+                        "position": "Left",
+                        "width": 2,
+                        "color": {
+                            "solid": {
+                                "color": "#1C2632"
+                            }
+                        }
+                    }
+                ],
+                "padding": [
+                    {
+                        "left": 5,
+                        "right": 5,
+                        "bottom": 5,
+                        "top": 5
+                    },
+                    {
+                        "$id": "default",
+                        "paddingSelection": "Custom",
+                        "leftMargin": 10
+                    },
+                    {
+                        "$id": "interaction:hover",
+                        "paddingSelection": "Custom",
+                        "leftMargin": 15
+                    }
+                ],
+                "background": [
+                    {
+                        "show": false
+                    }
+                ],
+                "border": [
+                    {
+                        "show": false
+                    }
+                ],
+                "title": [
+                    {
+                        "show": false
+                    }
+                ],
+                "subTitle": [
+                    {
+                        "show": false
+                    }
+                ],
+                "divider": [
+                    {
+                        "show": false
+                    }
+                ]
+            },
+            "HorizontalWithoutBackground": {
+                "value": [
+                    {
+                        "$id": "default",
+                        "horizontalAlignment": "center"
+                    }
+                ],
+                "layout": [
+                    {
+                        "autoGrid": true,
+                        "orientation": 2,
+                        "maxTiles": 6,
+                        "style": "Cards"
+                    }
+                ],
+                "accentBar": [
+                    {
+                        "$id": "default",
+                        "show": true,
+                        "position": "Bottom",
+                        "width": 2,
+                        "color": {
+                            "solid": {
+                                "color": "#1C2632"
+                            }
+                        }
+                    }
+                ],
+                "padding": [
+                    {
+                        "left": 5,
+                        "right": 5,
+                        "bottom": 5,
+                        "top": 5
+                    },
+                    {
+                        "$id": "default",
+                        "paddingSelection": "Normal"
+                    },
+                    {
+                        "$id": "interaction:hover",
+                        "paddingSelection": "Custom",
+                        "bottomMargin": 15
+                    }
+                ],
+                "background": [
+                    {
+                        "show": false
+                    }
+                ],
+                "border": [
+                    {
+                        "show": false
+                    }
+                ],
+                "title": [
+                    {
+                        "show": false
+                    }
+                ],
+                "subTitle": [
+                    {
+                        "show": false
+                    }
+                ],
+                "divider": [
+                    {
+                        "show": false
                     }
                 ]
             }
