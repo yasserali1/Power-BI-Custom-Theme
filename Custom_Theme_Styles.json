@@ -5347,6 +5347,11 @@
                         "leftMargin": 10
                     },
                     {
+                        "$id": "interaction:press",
+                        "paddingSelection": "Custom",
+                        "leftMargin": 10
+                    },                    
+                    {
                         "$id": "interaction:hover",
                         "paddingSelection": "Custom",
                         "leftMargin": 15
