@@ -5415,7 +5415,11 @@
                     },
                     {
                         "$id": "default",
-                        "paddingSelection": "Normal"
+                        "paddingSelection": "Narrow"
+                    },
+                    {
+                        "$id": "interaction:press",
+                        "paddingSelection": "Narrow"
                     },
                     {
                         "$id": "interaction:hover",
