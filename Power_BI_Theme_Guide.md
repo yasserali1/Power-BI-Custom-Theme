@@ -519,7 +519,7 @@ Enable backgrounds for all visuals by default.
 |----------|-------|---------|
 | **show** | true | Display borders |
 | **radius** | 7 | Border corner radius (pixels) |
-| **color** | #FFFFFF | White border color |
+| **color** | <span style="display:inline-block;width:12px;height:12px;background-color:#FFFFFF;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#FFFFFF | White border color |
 
 #### <span id="title-configuration">5.4.5 Title Configuration</span>
 
@@ -1575,8 +1575,8 @@ Each example shows the complete, copy-pasteable JSON structure. Place these insi
 | **Padding** | 10px all sides | Enough breathing room without wasting space |
 | **Value axis** | Hidden | Declutters charts — values are shown via data labels instead |
 | **Responsive layout** | Disabled | Ensures consistent layout across screen sizes and prevents Power BI from auto-resizing elements |
-| **Title font color** | #8793A3 (gray) | Keeps titles subtle so data stays prominent |
-| **Data label backgrounds** | #E5EEFF (light blue) | Makes labels readable on any bar/line color |
+| **Title font color** | <span style="display:inline-block;width:12px;height:12px;background-color:#8793A3;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#8793A3 (gray) | Keeps titles subtle so data stays prominent |
+| **Data label backgrounds** | <span style="display:inline-block;width:12px;height:12px;background-color:#E5EEFF;border:1px solid #ddd;vertical-align:middle;margin-right:4px;"></span>#E5EEFF (light blue) | Makes labels readable on any bar/line color |
 
 #### Color Quick Reference
 
