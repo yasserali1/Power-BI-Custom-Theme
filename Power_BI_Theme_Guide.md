@@ -57,6 +57,8 @@ The **Custom_Theme_Styles.json** is a comprehensive Power BI theme file designed
 
 The theme follows a hierarchical 4-level structure that ensures consistency while allowing visual customization at multiple levels.
 
+> **Note**: The visual formatting examples shown in this document may differ from the actual styles applied by the theme file (`Custom_Theme_Styles.json`). The theme is actively maintained and may be updated or improved over time. Always refer to the theme file itself as the source of truth for current formatting.
+
 #### How to Apply This Theme
 
 1. Open your Power BI report in **Power BI Desktop**
