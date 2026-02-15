@@ -99,19 +99,66 @@ Lower levels override upper levels. User manual formatting overrides all theme s
 
 ## 🔗 Visual Name Reference
 
-The theme includes styling for 40+ Power BI visuals. Common visual names:
+The theme includes styling for 40+ Power BI visuals:
 
 | Visual | JSON Name |
 |--------|-----------|
-| Card | `card` |
-| Table (new) | `tableEx` |
-| Bar Chart (stacked) | `barChart` |
-| Clustered Bar Chart | `clusteredBarChart` |
-| Line Chart | `lineChart` |
+| All visuals (defaults) | `*` |
+| Action button | `actionButton` |
+| Button slicer | `advancedSlicerVisual` |
+| AI narratives | `aiNarratives` |
+| Area chart | `areaChart` |
+| Azure map | `azureMap` |
+| Stacked bar chart | `barChart` |
+| Bookmark navigator | `bookmarkNavigator` |
+| Card (legacy) | `card` |
+| Card (new) | `cardVisual` |
+| Clustered bar chart | `clusteredBarChart` |
+| Clustered column chart | `clusteredColumnChart` |
+| Stacked column chart | `columnChart` |
+| Decomposition tree | `decompositionTreeVisual` |
+| Donut chart | `donutChart` |
+| Filled map | `filledMap` |
+| Filter | `filter` |
+| Funnel | `funnel` |
+| Gauge | `gauge` |
+| Group (container) | `group` |
+| 100% stacked area chart | `hundredPercentStackedAreaChart` |
+| 100% stacked bar chart | `hundredPercentStackedBarChart` |
+| 100% stacked column chart | `hundredPercentStackedColumnChart` |
+| Image | `image` |
+| Key influencers | `keyDriversVisual` |
+| KPI | `kpi` |
+| Line chart | `lineChart` |
+| Line + clustered column combo | `lineClusteredColumnComboChart` |
+| Line + stacked column combo | `lineStackedColumnComboChart` |
+| List slicer | `listSlicer` |
+| Map | `map` |
+| Multi-row card | `multiRowCard` |
+| Page | `page` |
+| Page navigator | `pageNavigator` |
+| Pie chart | `pieChart` |
 | Matrix | `pivotTable` |
+| Python visual | `pythonVisual` |
+| Q&A visual | `qnaVisual` |
+| RDL visual | `rdlVisual` |
+| Report (report-level) | `report` |
+| Ribbon chart | `ribbonChart` |
+| Scatter chart | `scatterChart` |
+| Scorecard | `scorecard` |
+| Script visual | `scriptVisual` |
+| Shape | `shape` |
+| Shape map | `shapeMap` |
 | Slicer | `slicer` |
+| Stacked area chart | `stackedAreaChart` |
+| Table (legacy) | `table` |
+| Table (new) | `tableEx` |
+| Text box | `textbox` |
+| Text slicer | `textSlicer` |
+| Treemap | `treemap` |
+| Waterfall chart | `waterfallChart` |
 
-See **Section 6 (Visual Name Reference)** for the complete list of 40+ visuals.
+> **Note**: Some names don't match what you'd expect — `barChart` is the **stacked** bar chart, `pivotTable` is the **Matrix**, `tableEx` is the **new** table, and `card` is the **legacy** card while `cardVisual` is the new one.
 
 ## 🎯 Example: Customizing Card Values
 
