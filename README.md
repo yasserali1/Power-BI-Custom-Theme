@@ -2,6 +2,8 @@
 
 A comprehensive, production-ready Power BI theme with complete documentation, customization guides, and real-world examples.
 
+![Before and After applying the theme](preview.png)
+
 ## 📋 Overview
 
 This repository contains a complete Power BI theme designed for professional, cohesive visual experiences across all Power BI reports and dashboards. The theme defines colors, typography, and visual styling for 40+ Power BI visualization types, following a hierarchical 4-level structure.
