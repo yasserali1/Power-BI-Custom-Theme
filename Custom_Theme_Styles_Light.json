@@ -4002,7 +4002,8 @@
                             "solid": {
                                 "color": "#656E7A"
                             }
-                        }
+                        },
+                        "goalText": "Target"
                     }
                 ]
             },
