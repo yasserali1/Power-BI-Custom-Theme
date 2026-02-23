@@ -1,12 +1,8 @@
 # Power BI Custom Theme — Complete Guide
 
-<div style="margin:12px 0;display:flex;gap:8px;flex-wrap:wrap;">
-  <button type="button" onclick="document.querySelectorAll('details.collapsible-section').forEach(d => d.open = true)" style="background:#F3F3F3;color:#595B69;border:0;border-radius:5px;padding:6px 12px;font-weight:bold;cursor:pointer;border-bottom:2px solid #1C2632;">Expand All</button>
-  <button type="button" onclick="document.querySelectorAll('details.collapsible-section').forEach(d => d.open = false)" style="background:#F3F3F3;color:#595B69;border:0;border-radius:5px;padding:6px 12px;font-weight:bold;cursor:pointer;border-bottom:2px solid #1C2632;">Collapse All</button>
-</div>
 
 <details open class="collapsible-section">
-<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="table-of-contents">Table of Contents</span></summary>
+<summary><span id="table-of-contents">Table of Contents</span></summary>
 
 1. [Overview & How to Apply](#overview--how-to-apply)
 2. [Theme Properties](#theme-properties)
@@ -49,7 +45,7 @@
 </details>
 
 <details open class="collapsible-section">
-<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="overview--how-to-apply">1. Overview & How to Apply</span></summary>
+<summary><span id="overview--how-to-apply">1. Overview & How to Apply</span></summary>
 
 ---
 
@@ -77,7 +73,7 @@ The theme follows a hierarchical 4-level structure that ensures consistency whil
 </details>
 
 <details open class="collapsible-section">
-<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="theme-properties">2. Theme Properties</span></summary>
+<summary><span id="theme-properties">2. Theme Properties</span></summary>
 
 ---
 
@@ -92,7 +88,7 @@ The theme follows a hierarchical 4-level structure that ensures consistency whil
 </details>
 
 <details open class="collapsible-section">
-<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="custom-icons">2.2 Custom Icons</span></summary>
+<summary><span id="custom-icons">2.2 Custom Icons</span></summary>
 
 The theme includes 15 custom SVG icons for use in Power BI reports and filters.
 
@@ -100,19 +96,19 @@ The theme includes 15 custom SVG icons for use in Power BI reports and filters.
 
 | Category | Count | Purpose | Snippets |
 |----------|-------|---------|----------|
-| **Directional Indicators** | 5 | KPI trends, status changes, directional metrics | <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfOTUxXzQ2MDMwKSI+PHBhdGggZD0iTTcuOTk5NjcgMTQuNjY2OEMxMS42ODE1IDE0LjY2NjggMTQuNjY2MyAxMS42ODIgMTQuNjY2MyA4LjAwMDE2QzE0LjY2NjMgNC4zMTgyNiAxMS42ODE1IDEuMzMzNSA3Ljk5OTY3IDEuMzMzNUM0LjMxNzc3IDEuMzMzNSAxLjMzMzAxIDQuMzE4MjYgMS4zMzMwMSA4LjAwMDE2QzEuMzMzMDEgMTEuNjgyIDQuMzE3NzcgMTQuNjY2OCA3Ljk5OTY3IDE0LjY2NjhaIiBmaWxsPSIjRjVFOUVDIiBzdHJva2U9IiNjMjI1NWMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik04LjAwMDMzIDUuMzMzNVYxMC42NjY4TTguMDAwMzMgMTAuNjY2OEwxMC4zMzM3IDguMzMzNU04LjAwMDMzIDEwLjY2NjhMNS42NjY5OSA4LjMzMzUiIHN0cm9rZT0iI2MyMjU1YyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDBfOTUxXzQ2MDMwIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9IndoaXRlIi8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+" alt="Arrow Down Bad" width="16" height="16" /> <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfOTUyXzQ2MDUwKSI+PHBhdGggZD0iTTcuOTk5NjcgMTQuNjY2OEMxMS42ODE1IDE0LjY2NjggMTQuNjY2MyAxMS42ODIgMTQuNjY2MyA4LjAwMDE2QzE0LjY2NjMgNC4zMTgyNiAxMS42ODE1IDEuMzMzNSA3Ljk5OTY3IDEuMzMzNUM0LjMxNzc3IDEuMzMzNSAxLjMzMzAxIDQuMzE4MjYgMS4zMzMwMSA4LjAwMDE2QzEuMzMzMDEgMTEuNjgyIDQuMzE3NzcgMTQuNjY2OCA3Ljk5OTY3IDE0LjY2NjhaIiBmaWxsPSIjRTlGOUY3IiBmaWxsLW9wYWNpdHk9IjEiIHN0cm9rZT0iIzA5QjM5RCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTguMDAwMzMgNS4zMzM1VjEwLjY2NjhNOC4wMDAzMyAxMC42NjY4TDEwLjMzMzcgOC4zMzM1TTguMDAwMzMgMTAuNjY2OEw1LjY2Njk5IDguMzMzNSIgc3Ryb2tlPSIjMDlCMzlEIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L2c+PGRlZnM+PGNsaXBQYXRoIGlkPSJjbGlwMF85NTJfNDYwNTAiPjxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0id2hpdGUiLz48L2NsaXBQYXRoPjwvZGVmcz48L3N2Zz4=" alt="Arrow Down Good" width="16" height="16" /> <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfOTUxXzQ2MDMzKSI+PHBhdGggZD0iTTcuOTk5NjcgMTQuNjY2OEMxMS42ODE1IDE0LjY2NjggMTQuNjY2MyAxMS42ODIgMTQuNjY2MyA4LjAwMDE2QzE0LjY2NjMgNC4zMTgyNiAxMS42ODE1IDEuMzMzNSA3Ljk5OTY3IDEuMzMzNUM0LjMxNzc3IDEuMzMzNSAxLjMzMzAxIDQuMzE4MjYgMS4zMzMwMSA4LjAwMDE2QzEuMzMzMDEgMTEuNjgyIDQuMzE3NzcgMTQuNjY2OCA3Ljk5OTY3IDE0LjY2NjhaIiBmaWxsPSIjRjRGNEY0IiBzdHJva2U9IiM0MDQwNDAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik01LjMzMzAxIDcuOTk5ODRIMTAuNjY2M00xMC42NjYzIDcuOTk5ODRMOC4zMzMwMSA1LjY2NjVNMTAuNjY2MyA3Ljk5OTg0TDguMzMzMDEgMTAuMzMzMiIgc3Ryb2tlPSIjNDA0MDQwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L2c+PGRlZnM+PGNsaXBQYXRoIGlkPSJjbGlwMF85NTFfNDYwMzMiPjxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0id2hpdGUiLz48L2NsaXBQYXRoPjwvZGVmcz48L3N2Zz4=" alt="Arrow Right Neutral" width="16" height="16" /> <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfOTUyXzQ2MDUyKSI+PHBhdGggZD0iTTcuOTk5NjcgMTQuNjY2OEMxMS42ODE1IDE0LjY2NjggMTQuNjY2MyAxMS42ODIgMTQuNjY2MyA4LjAwMDE2QzE0LjY2NjMgNC4zMTgyNiAxMS42ODE1IDEuMzMzNSA3Ljk5OTY3IDEuMzMzNUM0LjMxNzc3IDEuMzMzNSAxLjMzMzAxIDQuMzE4MjYgMS4zMzMwMSA4LjAwMDE2QzEuMzMzMDEgMTEuNjgyIDQuMzE3NzcgMTQuNjY2OCA3Ljk5OTY3IDE0LjY2NjhaIiBmaWxsPSIjRjVFOUVDIiBzdHJva2U9IiNjMjI1NWMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik04LjAwMDMzIDEwLjY2NjhWNS4zMzM1TTguMDAwMzMgNS4zMzM1TDEwLjMzMzcgNy42NjY4M004LjAwMDMzIDUuMzMzNUw1LjY2Njk5IDcuNjY2ODMiIHN0cm9rZT0iI2MyMjU1YyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDBfOTUyXzQ2MDUyIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9IndoaXRlIi8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+" alt="Arrow Up Bad" width="16" height="16" /> <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfOTUwXzQ2MDI3KSI+PHBhdGggZD0iTTcuOTk5NjcgMTQuNjY2OEMxMS42ODE1IDE0LjY2NjggMTQuNjY2MyAxMS42ODIgMTQuNjY2MyA4LjAwMDE2QzE0LjY2NjMgNC4zMTgyNiAxMS42ODE1IDEuMzMzNSA3Ljk5OTY3IDEuMzMzNUM0LjMxNzc3IDEuMzMzNSAxLjMzMzAxIDQuMzE4MjYgMS4zMzMwMSA4LjAwMDE2QzEuMzMzMDEgMTEuNjgyIDQuMzE3NzcgMTQuNjY2OCA3Ljk5OTY3IDE0LjY2NjhaIiBmaWxsPSIjRTlGOUY3IiBmaWxsLW9wYWNpdHk9IjEiIHN0cm9rZT0iIzA5QjM5RCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTguMDAwMzMgMTAuNjY2OFY1LjMzMzVNOC4wMDAzMyA1LjMzMzVMMTAuMzMzNyA3LjY2NjgzTTguMDAwMzMgNS4zMzM1TDUuNjY2OTkgNy42NjY4MyIgc3Ryb2tlPSIjMDlCMzlEIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L2c+PGRlZnM+PGNsaXBQYXRoIGlkPSJjbGlwMF85NTBfNDYwMjciPjxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0id2hpdGUiLz48L2NsaXBQYXRoPjwvZGVmcz48L3N2Zz4=" alt="Arrow Up Good" width="16" height="16" /> |
-| **Status & Validation** | 3 | Success/failure states, validation indicators | <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYgMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE0LjY2NyA4QTYuNjY3IDYuNjY3IDAgMSAxIDEuMzMzIDhhNi42NjcgNi42NjcgMCAwIDEgMTMuMzM0IDBNMTEuMjEgNi4zODdhLjY2Ny42NjcgMCAxIDAtMS4wODUtLjc3NUw3LjI0OSA5LjYzOSA1LjgwNiA4LjE5NWEuNjY3LjY2NyAwIDAgMC0uOTQzLjk0M2wyIDJhLjY2Ny42NjcgMCAwIDAgMS4wMTMtLjA4NHoiIGZpbGw9IiMwOWIzOWQiLz48L3N2Zz4=" alt="Check Mark Green" width="16" height="16" /> <img src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjYzIyNTVjIiB2aWV3Qm94PSIwIDAgMTYgMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48cGF0aCBkPSJNOCAxLjMzM0E2LjY2NyA2LjY2NyAwIDEgMCAxNC42NjcgOCA2LjY2NyA2LjY2NyAwIDAgMCA4IDEuMzMzbTIuNDczIDguMTkzYS42NjcuNjY3IDAgMCAxIDAgLjk0Ny42NjcuNjY3IDAgMCAxLS45NDcgMEw4IDguOTQ3bC0xLjUyNyAxLjUyN2EuNjY3LjY2NyAwIDAgMS0uOTQ3IDAgLjY2Ny42NjcgMCAwIDEgMC0uOTQ3TDcuMDUzIDggNS41MjcgNi40NzNhLjY2Ny42NjcgMCAwIDEgLjk0Ny0uOTQ3TDggNy4wNTNsMS41MjctMS41MjdhLjY2Ny42NjcgMCAwIDEgLjk0Ny45NDdMOC45NDcgOFoiLz48L3N2Zz4=" alt="X Mark Red" width="16" height="16" /> <img src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiB2aWV3Qm94PSIwIDAgMTYgMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48cGF0aCBkPSJNOCAxLjMzM0E2LjY2NyA2LjY2NyAwIDEgMCAxNC42NjcgOCA2LjY2NyA2LjY2NyAwIDAgMCA4IDEuMzMzWm0yLjQ3MyA4LjE5M2EuNjY3LjY2NyAwIDAgMSAwIC45NDcuNjY3LjY2NyAwIDAgMS0uOTQ3IDBMOCA4Ljk0N2wtMS41MjcgMS41MjdhLjY2Ny42NjcgMCAwIDEtLjk0NyAwIC42NjcuNjY3IDAgMCAxIDAtLjk0N0w3LjA1MyA4IDUuNTI3IDYuNDczYS42NjcuNjY3IDAgMCAxIC45NDctLjk0N0w4IDcuMDUzbDEuNTI3LTEuNTI3YS42NjcuNjY3IDAgMCAxIC45NDcuOTQ3TDguOTQ3IDhaIi8+PC9zdmc+" alt="X Mark Black" width="16" height="16" /> |
-| **Alert & Warning** | 2 | Warning messages, attention needed | <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYgMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuMzMzIDguNjY3YS42NjcuNjY3IDAgMSAwIDEuMzMzIDB2LTJhLjY2Ny42NjcgMCAxIDAtMS4zMzMgMHptMS4zMzMgMS45OTNhLjY2Ny42NjcgMCAxIDAtMS4zMzMgMHYuMDA3YS42NjcuNjY3IDAgMSAwIDEuMzMzIDB6TTYuMjUxIDMuMTA3Yy43NjItMS4zNzEgMi43MzUtMS4zNzEgMy40OTcgMGw0LjQwMSA3LjkyMWMuNzQxIDEuMzMzLS4yMjMgMi45NzEtMS43NDggMi45NzFIMy41OTljLTEuNTI1IDAtMi40ODktMS42MzgtMS43NDktMi45NzF6IiBmaWxsPSIjZWZiYzFiIi8+PC9zdmc+" alt="Alert Triangle" width="16" height="16" /> <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYgMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEuMzMzIDhhNi42NjcgNi42NjcgMCAxIDEgMTMuMzM0IDBBNi42NjcgNi42NjcgMCAwIDEgMS4zMzMgOG02IC42NjdhLjY2Ny42NjcgMCAxIDAgMS4zMzMgMFY1LjMzM2EuNjY3LjY2NyAwIDEgMC0xLjMzMyAwem0xLjMzMyAxLjk5M2EuNjY3LjY2NyAwIDEgMC0xLjMzMyAwdi4wMDdhLjY2Ny42NjcgMCAxIDAgMS4zMzMgMHoiIGZpbGw9IiNlZmJjMWIiLz48L3N2Zz4=" alt="Alert Circle" width="16" height="16" /> |
-| **Filter Controls** | 2 | Active/inactive filter states | <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNjYzIDYuMDQyYzAtLjQzOS4yOC0uODEyLjY3MS0uOTVWMy43SDIuMzMzQS4zMzMuMzMzIDAgMCAwIDIgNC4wMzN2OGEuMzMzLjMzMyAwIDAgMCAuMzMzLjMzM2g0LjMyMmEuMzMzLjMzMyAwIDEgMSAwIC42NjdIMi4zMzNhMSAxIDAgMCAxLTEtMXYtOGExIDEgMCAwIDEgMS0xaDIuMDAxdi0uNjU5YS4zMzMuMzMzIDAgMSAxIC42NjcgMHYuNjU5aDNhLjMzMy4zMzMgMCAwIDEgLjMzMy4zMzN2NS43MDZhMS4wMDggMS4wMDggMCAwIDEgMCAxLjkwNHYxLjM5MWg1LjMzM2EuMzMzLjMzMyAwIDAgMCAuMzMzLS4zMzN2LThhLjMzMy4zMzMgMCAwIDAtLjMzMy0uMzMzSDkuMzM0YS4zMzMuMzMzIDAgMSAxIDAtLjY2N2gxLjY2N1YyLjM4YS4zMzMuMzMzIDAgMSAxIC42NjcgMHYuNjUzaDEuOTk5YTEgMSAwIDAgMSAxIDF2OGExIDEgMCAwIDEtMSAxSDguMzM0di42MzRhLjMzMy4zMzMgMCAxIDEtLjY2NyAwdi0yLjY5MmExLjAwOCAxLjAwOCAwIDAgMSAwLTEuOVYzLjdINXYxLjM5MWExLjAwOCAxLjAwOCAwIDAgMSAwIDEuOTA1djQuMzU2YS4zMzMuMzMzIDAgMSAxLS42NjcgMFY2Ljk5M2ExLjAxIDEuMDEgMCAwIDEtLjY3MS0uOTUxbTEuMDE4LjM0MWgtLjAyM2EuMzQxLjM0MSAwIDEgMSAuMDIzIDBNMTEgOC45OTJhMS4wMDkgMS4wMDkgMCAwIDEgMC0xLjkwMVY0LjcxN2EuMzMzLjMzMyAwIDEgMSAuNjY3IDB2Mi4zNzRhMS4wMDggMS4wMDggMCAwIDEgMCAxLjkwNXYyLjM1NmEuMzMzLjMzMyAwIDEgMS0uNjY3IDB6bS42NzctLjk1MWEuMzQxLjM0MSAwIDEgMC0uNjgxIDAgLjM0MS4zNDEgMCAwIDAgLjY4MSAwbS0zLjMzMyAxLjk4M2EuMzQxLjM0MSAwIDEgMC0uNjgyIDAgLjM0MS4zNDEgMCAwIDAgLjY4MiAwIiBmaWxsPSIjNDA0MTQzIi8+PC9zdmc+" alt="Filter Dark Grey" width="16" height="16" /> <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNjYzIDYuMDQyYzAtLjQzOS4yOC0uODEyLjY3MS0uOTVWMy43SDIuMzMzQS4zMzMuMzMzIDAgMCAwIDIgNC4wMzN2OGEuMzMzLjMzMyAwIDAgMCAuMzMzLjMzM2g0LjMyMmEuMzMzLjMzMyAwIDEgMSAwIC42NjdIMi4zMzNhMSAxIDAgMCAxLTEtMXYtOGExIDEgMCAwIDEgMS0xaDIuMDAxdi0uNjU5YS4zMzMuMzMzIDAgMSAxIC42NjcgMHYuNjU5aDNhLjMzMy4zMzMgMCAwIDEgLjMzMy4zMzN2NS43MDZhMS4wMDggMS4wMDggMCAwIDEgMCAxLjkwNHYxLjM5MWg1LjMzM2EuMzMzLjMzMyAwIDAgMCAuMzMzLS4zMzN2LThhLjMzMy4zMzMgMCAwIDAtLjMzMy0uMzMzSDkuMzM0YS4zMzMuMzMzIDAgMSAxIDAtLjY2N2gxLjY2N3YtLjY1M2EuMzMzLjMzMyAwIDEgMSAuNjY3IDB2LjY1MmgxLjk5OWExIDEgMCAwIDEgMSAxdjhhMSAxIDAgMCAxLTEgMUg4LjMzNHYuNjM0YS4zMzMuMzMzIDAgMSAxLS42NjcgMHYtMi42OTJhMS4wMDggMS4wMDggMCAwIDEgMC0xLjlWMy43SDV2MS4zOTFhMS4wMDggMS4wMDggMCAwIDEgMCAxLjkwNXY0LjM1NmEuMzMzLjMzMyAwIDEgMS0uNjY3IDBWNi45OTNhMS4wMSAxLjAxIDAgMCAxLS42NzEtLjk1MW0xLjAxOC4zNDFoLS4wMjNhLjM0MS4zNDEgMCAxIDEgLjAyMyAwTTExIDguOTkyYTEuMDA5IDEuMDA5IDAgMCAxIDAtMS45MDFWNC43MTdhLjMzMy4zMzMgMCAxIDEgLjY2NyAwdjIuMzc0YTEuMDA4IDEuMDA4IDAgMCAxIDAgMS45MDV2Mi4zNTZhLjMzMy4zMzMgMCAxIDEtLjY2NyAwem0uNjc3LS45NTFhLjM0MS4zNDEgMCAxIDAtLjY4MSAwIC4zNDEuMzQxIDAgMCAwIC42ODEgMG0tMy4zMzMgMS45ODNhLjM0MS4zNDEgMCAxIDAtLjY4MiAwIC4zNDEuMzQxIDAgMCAwIC42ODIgMCIgZmlsbD0iI2RhM2Y0NSIvPjwvc3ZnPg==" alt="Filter Red" width="16" height="16" /> |
-| **Close Actions** | 2 | Dialog close, dismissal actions | <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMTMuNjMgMy42NS0xLjI4LTEuMjdMOCA2LjczIDMuNjQgMi4zOCAyLjM3IDMuNjVsNC4zNSA0LjM2LTQuMzQgNC4zNCAxLjI3IDEuMjhMOCA5LjI4bDQuMzUgNC4zNiAxLjI4LTEuMjgtNC4zNi00LjM1eiIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg==" alt="Close Black" width="16" height="16" /> <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9IiNkODNmNDciIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMTMuNjMgMy42NS0xLjI4LTEuMjdMOCA2LjczIDMuNjQgMi4zOCAyLjM3IDMuNjVsNC4zNSA0LjM2LTQuMzQgNC4zNCAxLjI3IDEuMjhMOCA5LjI4bDQuMzUgNC4zNiAxLjI4LTEuMjgtNC4zNi00LjM1eiIvPjwvc3ZnPg==" alt="Close Red" width="16" height="16" /> |
-| **Utility** | 1 | Collapse, minimize actions | <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYgMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEuMzMzIDhhNi42NjcgNi42NjcgMCAxIDEgMTMuMzM0IDBBNi42NjcgNi42NjcgMCAwIDEgMS4zMzMgOG00IDBBLjY2Ny42NjcgMCAwIDEgNiA3LjMzM2g0YS42NjcuNjY3IDAgMSAxIDAgMS4zMzNINmEuNjY3LjY2NyAwIDAgMS0uNjY3LS42NjciIGZpbGw9IiM0MDQwNDAiLz48L3N2Zz4=" alt="Minus Dark Grey" width="16" height="16" /> |
+| **Directional Indicators** | 5 | KPI trends, status changes, directional metrics | <img src="icons/arrow-down-bad.svg" alt="Arrow Down Bad" width="16" height="16" /> <img src="icons/arrow-down-good.svg" alt="Arrow Down Good" width="16" height="16" /> <img src="icons/arrow-right-neutral.svg" alt="Arrow Right Neutral" width="16" height="16" /> <img src="icons/arrow-up-bad.svg" alt="Arrow Up Bad" width="16" height="16" /> <img src="icons/arrow-up-good.svg" alt="Arrow Up Good" width="16" height="16" /> |
+| **Status & Validation** | 3 | Success/failure states, validation indicators | <img src="icons/check-mark-green.svg" alt="Check Mark Green" width="16" height="16" /> <img src="icons/x-mark-red.svg" alt="X Mark Red" width="16" height="16" /> <img src="icons/x-mark-black.svg" alt="X Mark Black" width="16" height="16" /> |
+| **Alert & Warning** | 2 | Warning messages, attention needed | <img src="icons/alert-triangle.svg" alt="Alert Triangle" width="16" height="16" /> <img src="icons/alert-circle.svg" alt="Alert Circle" width="16" height="16" /> |
+| **Filter Controls** | 2 | Active/inactive filter states | <img src="icons/filter-dark-grey.svg" alt="Filter Dark Grey" width="16" height="16" /> <img src="icons/filter-red.svg" alt="Filter Red" width="16" height="16" /> |
+| **Close Actions** | 2 | Dialog close, dismissal actions | <img src="icons/close-black.svg" alt="Close Black" width="16" height="16" /> <img src="icons/close-red.svg" alt="Close Red" width="16" height="16" /> |
+| **Utility** | 1 | Collapse, minimize actions | <img src="icons/minus-dark-grey.svg" alt="Minus Dark Grey" width="16" height="16" /> |
 
 </details>
 
 ---
 
 <details open class="collapsible-section">
-<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="color-palette">3. Color Palette</span></summary>
+<summary><span id="color-palette">3. Color Palette</span></summary>
 
 ---
 
@@ -123,12 +119,12 @@ The theme includes 15 custom SVG icons for use in Power BI reports and filters.
 
 | Data 1 | Data 2 | Data 3 | Data 4 |
 | --- | --- | --- | --- |
-| <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiPjxyZWN0IHdpZHRoPSIxMTkiIGhlaWdodD0iMzkiIHg9IjAuNSIgeT0iMC41IiByeD0iOCIgZmlsbD0iIzRGNzNCOCIgc3Ryb2tlPSIjZTFlNWVlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=" alt="#4F73B8" width="120" height="40" /> | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiPjxyZWN0IHdpZHRoPSIxMTkiIGhlaWdodD0iMzkiIHg9IjAuNSIgeT0iMC41IiByeD0iOCIgZmlsbD0iIzQ5QTlENSIgc3Ryb2tlPSIjZTFlNWVlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=" alt="#49A9D5" width="120" height="40" /> | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiPjxyZWN0IHdpZHRoPSIxMTkiIGhlaWdodD0iMzkiIHg9IjAuNSIgeT0iMC41IiByeD0iOCIgZmlsbD0iI0Q3QTc2NyIgc3Ryb2tlPSIjZTFlNWVlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=" alt="#D7A767" width="120" height="40" /> | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiPjxyZWN0IHdpZHRoPSIxMTkiIGhlaWdodD0iMzkiIHg9IjAuNSIgeT0iMC41IiByeD0iOCIgZmlsbD0iI0M0NzgzMiIgc3Ryb2tlPSIjZTFlNWVlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=" alt="#C47832" width="120" height="40" /> |
+| <img src="https://placehold.co/120x40/4F73B8/4F73B8.png" alt="#4F73B8" width="120" height="40" /> | <img src="https://placehold.co/120x40/49A9D5/49A9D5.png" alt="#49A9D5" width="120" height="40" /> | <img src="https://placehold.co/120x40/D7A767/D7A767.png" alt="#D7A767" width="120" height="40" /> | <img src="https://placehold.co/120x40/C47832/C47832.png" alt="#C47832" width="120" height="40" /> |
 | #4F73B8 | #49A9D5 | #D7A767 | #C47832 |
 
 | Data 5 | Data 6 | Data 7 | Data 8 |
 | --- | --- | --- | --- |
-| <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiPjxyZWN0IHdpZHRoPSIxMTkiIGhlaWdodD0iMzkiIHg9IjAuNSIgeT0iMC41IiByeD0iOCIgZmlsbD0iIzg3ODNGRiIgc3Ryb2tlPSIjZTFlNWVlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=" alt="#8783FF" width="120" height="40" /> | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiPjxyZWN0IHdpZHRoPSIxMTkiIGhlaWdodD0iMzkiIHg9IjAuNSIgeT0iMC41IiByeD0iOCIgZmlsbD0iIzFDMjYzMiIgc3Ryb2tlPSIjZTFlNWVlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=" alt="#1C2632" width="120" height="40" /> | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiPjxyZWN0IHdpZHRoPSIxMTkiIGhlaWdodD0iMzkiIHg9IjAuNSIgeT0iMC41IiByeD0iOCIgZmlsbD0iIzg3OTNBMyIgc3Ryb2tlPSIjZTFlNWVlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=" alt="#8793A3" width="120" height="40" /> | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiPjxyZWN0IHdpZHRoPSIxMTkiIGhlaWdodD0iMzkiIHg9IjAuNSIgeT0iMC41IiByeD0iOCIgZmlsbD0iI0RCREZFNCIgc3Ryb2tlPSIjZTFlNWVlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=" alt="#DBDFE4" width="120" height="40" /> |
+| <img src="https://placehold.co/120x40/8783FF/8783FF.png" alt="#8783FF" width="120" height="40" /> | <img src="https://placehold.co/120x40/1C2632/1C2632.png" alt="#1C2632" width="120" height="40" /> | <img src="https://placehold.co/120x40/8793A3/8793A3.png" alt="#8793A3" width="120" height="40" /> | <img src="https://placehold.co/120x40/DBDFE4/DBDFE4.png" alt="#DBDFE4" width="120" height="40" /> |
 | #8783FF | #1C2632 | #8793A3 | #DBDFE4 |
 
 
@@ -139,7 +135,7 @@ The theme includes 15 custom SVG icons for use in Power BI reports and filters.
 
 | Positive / Good | Neutral / Middle | Negative / Bad |
 | --- | --- | --- |
-| <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiPjxyZWN0IHdpZHRoPSIxMTkiIGhlaWdodD0iMzkiIHg9IjAuNSIgeT0iMC41IiByeD0iOCIgZmlsbD0iIzA5QjM5RCIgc3Ryb2tlPSIjZTFlNWVlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=" alt="#09B39D" width="120" height="40" /> | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiPjxyZWN0IHdpZHRoPSIxMTkiIGhlaWdodD0iMzkiIHg9IjAuNSIgeT0iMC41IiByeD0iOCIgZmlsbD0iIzQwNDA0MCIgc3Ryb2tlPSIjZTFlNWVlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=" alt="#404040" width="120" height="40" /> | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiPjxyZWN0IHdpZHRoPSIxMTkiIGhlaWdodD0iMzkiIHg9IjAuNSIgeT0iMC41IiByeD0iOCIgZmlsbD0iI2MyMjU1YyIgc3Ryb2tlPSIjZTFlNWVlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=" alt="#c2255c" width="120" height="40" /> |
+| <img src="https://placehold.co/120x40/09B39D/09B39D.png" alt="#09B39D" width="120" height="40" /> | <img src="https://placehold.co/120x40/404040/404040.png" alt="#404040" width="120" height="40" /> | <img src="https://placehold.co/120x40/c2255c/c2255c.png" alt="#c2255c" width="120" height="40" /> |
 | #09B39D | #404040 | #c2255c |
 
 
@@ -149,9 +145,9 @@ The theme includes 15 custom SVG icons for use in Power BI reports and filters.
 
 | Property | Hex Code | Purpose |
 |----------|----------|---------|
-| **maximum** | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiM0RjczQjgiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#4F73B8" width="12" height="12" />#4F73B8 | Maximum value indicator (Primary Blue) |
-| **center** | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiM5NUE5Q0UiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#95A9CE" width="12" height="12" />#95A9CE | Center/neutral value indicator |
-| **minimum** | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiNEQkRGRTQiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#DBDFE4" width="12" height="12" />#DBDFE4 | Minimum value indicator (Light Gray) |
+| **maximum** | <img src="https://placehold.co/12x12/4F73B8/4F73B8.png" alt="#4F73B8" width="12" height="12" />#4F73B8 | Maximum value indicator (Primary Blue) |
+| **center** | <img src="https://placehold.co/12x12/95A9CE/95A9CE.png" alt="#95A9CE" width="12" height="12" />#95A9CE | Center/neutral value indicator |
+| **minimum** | <img src="https://placehold.co/12x12/DBDFE4/DBDFE4.png" alt="#DBDFE4" width="12" height="12" />#DBDFE4 | Minimum value indicator (Light Gray) |
 
 > **Purpose**: Used for heat maps, range visualizations, and color scales.
 
@@ -162,7 +158,7 @@ The theme includes 15 custom SVG icons for use in Power BI reports and filters.
 
 | Main Background | Background Light | Page Background |
 | --- | --- | --- |
-| <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiPjxyZWN0IHdpZHRoPSIxMTkiIGhlaWdodD0iMzkiIHg9IjAuNSIgeT0iMC41IiByeD0iOCIgZmlsbD0iI0Y5RjlGOSIgc3Ryb2tlPSIjZTFlNWVlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=" alt="#F9F9F9" width="120" height="40" /> | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiPjxyZWN0IHdpZHRoPSIxMTkiIGhlaWdodD0iMzkiIHg9IjAuNSIgeT0iMC41IiByeD0iOCIgZmlsbD0iI0RCREZFNCIgc3Ryb2tlPSIjZTFlNWVlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=" alt="#DBDFE4" width="120" height="40" /> | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiPjxyZWN0IHdpZHRoPSIxMTkiIGhlaWdodD0iMzkiIHg9IjAuNSIgeT0iMC41IiByeD0iOCIgZmlsbD0iI0Y2RjhGQiIgc3Ryb2tlPSIjZTFlNWVlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=" alt="#F6F8FB" width="120" height="40" /> |
+| <img src="https://placehold.co/120x40/F9F9F9/F9F9F9.png" alt="#F9F9F9" width="120" height="40" /> | <img src="https://placehold.co/120x40/DBDFE4/DBDFE4.png" alt="#DBDFE4" width="120" height="40" /> | <img src="https://placehold.co/120x40/F6F8FB/F6F8FB.png" alt="#F6F8FB" width="120" height="40" /> |
 | #F9F9F9 | #DBDFE4 | #F6F8FB |
 
 
@@ -171,7 +167,7 @@ The theme includes 15 custom SVG icons for use in Power BI reports and filters.
 
 | Primary Text | Secondary Text | Tertiary Text |
 | --- | --- | --- |
-| <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiPjxyZWN0IHdpZHRoPSIxMTkiIGhlaWdodD0iMzkiIHg9IjAuNSIgeT0iMC41IiByeD0iOCIgZmlsbD0iIzFDMjYzMiIgc3Ryb2tlPSIjZTFlNWVlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=" alt="#1C2632" width="120" height="40" /> | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiPjxyZWN0IHdpZHRoPSIxMTkiIGhlaWdodD0iMzkiIHg9IjAuNSIgeT0iMC41IiByeD0iOCIgZmlsbD0iIzg3OTNBMyIgc3Ryb2tlPSIjZTFlNWVlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=" alt="#8793A3" width="120" height="40" /> | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiPjxyZWN0IHdpZHRoPSIxMTkiIGhlaWdodD0iMzkiIHg9IjAuNSIgeT0iMC41IiByeD0iOCIgZmlsbD0iIzRGNzNCOCIgc3Ryb2tlPSIjZTFlNWVlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=" alt="#4F73B8" width="120" height="40" /> |
+| <img src="https://placehold.co/120x40/1C2632/1C2632.png" alt="#1C2632" width="120" height="40" /> | <img src="https://placehold.co/120x40/8793A3/8793A3.png" alt="#8793A3" width="120" height="40" /> | <img src="https://placehold.co/120x40/4F73B8/4F73B8.png" alt="#4F73B8" width="120" height="40" /> |
 | #1C2632 | #8793A3 | #4F73B8 |
 
 
@@ -179,13 +175,13 @@ The theme includes 15 custom SVG icons for use in Power BI reports and filters.
 
 | Property | Hex Code | Purpose |
 |----------|----------|---------|
-| **foreground** | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiMxQzI2MzIiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#1C2632" width="12" height="12" />#1C2632 | Primary text color (Dark Blue-Gray) |
-| **foregroundNeutralSecondary** | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiMxQzI2MzIiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#1C2632" width="12" height="12" />#1C2632 | Secondary text (Dark Blue-Gray) |
-| **foregroundNeutralTertiary** | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiM0RjczQjgiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#4F73B8" width="12" height="12" />#4F73B8 | Tertiary text (Primary Blue) |
-| **background** | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiNGOUY5RjkiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#F9F9F9" width="12" height="12" />#F9F9F9 | Main background (Light Gray) |
-| **backgroundLight** | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiNEQkRGRTQiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#DBDFE4" width="12" height="12" />#DBDFE4 | Light background elements |
-| **backgroundNeutral** | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiNCNEJBQzMiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#B4BAC3" width="12" height="12" />#B4BAC3 | Neutral background tint |
-| **tableAccent** | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiM0MjY4NzEiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#426871" width="12" height="12" />#426871 | Table accent color (Dark Teal) |
+| **foreground** | <img src="https://placehold.co/12x12/1C2632/1C2632.png" alt="#1C2632" width="12" height="12" />#1C2632 | Primary text color (Dark Blue-Gray) |
+| **foregroundNeutralSecondary** | <img src="https://placehold.co/12x12/1C2632/1C2632.png" alt="#1C2632" width="12" height="12" />#1C2632 | Secondary text (Dark Blue-Gray) |
+| **foregroundNeutralTertiary** | <img src="https://placehold.co/12x12/4F73B8/4F73B8.png" alt="#4F73B8" width="12" height="12" />#4F73B8 | Tertiary text (Primary Blue) |
+| **background** | <img src="https://placehold.co/12x12/F9F9F9/F9F9F9.png" alt="#F9F9F9" width="12" height="12" />#F9F9F9 | Main background (Light Gray) |
+| **backgroundLight** | <img src="https://placehold.co/12x12/DBDFE4/DBDFE4.png" alt="#DBDFE4" width="12" height="12" />#DBDFE4 | Light background elements |
+| **backgroundNeutral** | <img src="https://placehold.co/12x12/B4BAC3/B4BAC3.png" alt="#B4BAC3" width="12" height="12" />#B4BAC3 | Neutral background tint |
+| **tableAccent** | <img src="https://placehold.co/12x12/426871/426871.png" alt="#426871" width="12" height="12" />#426871 | Table accent color (Dark Teal) |
 
 > **For comprehensive details on structural color classes and their usage across visual elements, see [Microsoft Power BI Structural Colors Documentation](https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-report-themes#set-structural-colors).**
 
@@ -194,7 +190,7 @@ The theme includes 15 custom SVG icons for use in Power BI reports and filters.
 ---
 
 <details open class="collapsible-section">
-<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="typography--text-classes">4. Typography & Text Classes</span></summary>
+<summary><span id="typography--text-classes">4. Typography & Text Classes</span></summary>
 
 ---
 
@@ -206,17 +202,17 @@ All text elements use **Calibri** as the primary font family.
 
 | Class | Type | Inherits From | Font Size | Font | Color | Sample | Used In |
 |-------|------|---|-----------|------|-------|--------|----------|
-| **callout** | Primary | - | 11pt | Calibri | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiMxQzI2MzIiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#1C2632" width="12" height="12" />#1C2632 | Sample Text | Card data labels, KPI indicators |
-| **title** | Primary | - | 10pt | Calibri | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiMxQzI2MzIiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#1C2632" width="12" height="12" />#1C2632 | Sample Text | Category/Value axis titles, Multi-row card titles, Slicer headers |
-| **header** | Primary | - | Default | Calibri | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiMxQzI2MzIiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#1C2632" width="12" height="12" />#1C2632 | Sample Text | Key influencers headers |
-| **label** | Primary | - | 10pt | Calibri | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiM4NzkzQTMiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#8793A3" width="12" height="12" />#8793A3 | Sample Text | Table/Matrix column & row headers, grid, values |
+| **callout** | Primary | - | 11pt | Calibri | <img src="https://placehold.co/12x12/1C2632/1C2632.png" alt="#1C2632" width="12" height="12" />#1C2632 | Sample Text | Card data labels, KPI indicators |
+| **title** | Primary | - | 10pt | Calibri | <img src="https://placehold.co/12x12/1C2632/1C2632.png" alt="#1C2632" width="12" height="12" />#1C2632 | Sample Text | Category/Value axis titles, Multi-row card titles, Slicer headers |
+| **header** | Primary | - | Default | Calibri | <img src="https://placehold.co/12x12/1C2632/1C2632.png" alt="#1C2632" width="12" height="12" />#1C2632 | Sample Text | Key influencers headers |
+| **label** | Primary | - | 10pt | Calibri | <img src="https://placehold.co/12x12/8793A3/8793A3.png" alt="#8793A3" width="12" height="12" />#8793A3 | Sample Text | Table/Matrix column & row headers, grid, values |
 | **boldLabel** | Secondary | label | Inherited | Calibri | Inherited | **Sample Text** | Matrix subtotals, grand totals, Table totals |
 | **semiboldLabel** | Secondary | label | Inherited | Calibri | Inherited | **Sample Text** | Key influencers profile text |
 | **largeLabel** | Secondary | label | 12pt | Inherited | Inherited | Sample Text | Multi-row card data labels |
 | **smallLabel** | Secondary | label | 9pt | Inherited | Inherited | Sample Text | Reference line labels, Slicer input text, Key influencers text |
-| **lightLabel** | Secondary | label | Inherited | Inherited | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiM1OTVCNjkiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#595B69" width="12" height="12" />#595B69 | Sample Text | Legend text, Button text, Category axis labels, Gauge target |
-| **largeLightLabel** | Secondary | label | 12pt | Inherited | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiM4NzkzQTMiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#8793A3" width="12" height="12" />#8793A3 | Sample Text | Card/Gauge category labels, Multi-row card category labels |
-| **smallLightLabel** | Secondary | label | 9pt | Inherited | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiM1OTVCNjkiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#595B69" width="12" height="12" />#595B69 | Sample Text | Data labels, Value axis labels |
+| **lightLabel** | Secondary | label | Inherited | Inherited | <img src="https://placehold.co/12x12/595B69/595B69.png" alt="#595B69" width="12" height="12" />#595B69 | Sample Text | Legend text, Button text, Category axis labels, Gauge target |
+| **largeLightLabel** | Secondary | label | 12pt | Inherited | <img src="https://placehold.co/12x12/8793A3/8793A3.png" alt="#8793A3" width="12" height="12" />#8793A3 | Sample Text | Card/Gauge category labels, Multi-row card category labels |
+| **smallLightLabel** | Secondary | label | 9pt | Inherited | <img src="https://placehold.co/12x12/595B69/595B69.png" alt="#595B69" width="12" height="12" />#595B69 | Sample Text | Data labels, Value axis labels |
 | **largeTitle** | Secondary | title | 14pt | Inherited | Inherited | Sample Text | Visual titles |
 
 > **Note**: Secondary classes automatically inherit properties from their primary class. Properties shown in the table are explicitly defined in the theme JSON file. For example, `boldLabel` explicitly defines `fontFace: "Calibri"` even though it matches the parent `label` class. Properties not explicitly defined are inherited from the parent class.
@@ -227,7 +223,7 @@ All text elements use **Calibri** as the primary font family.
 ---
 
 <details open class="collapsible-section">
-<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="theme-file-structure">5. Theme File Structure</span></summary>
+<summary><span id="theme-file-structure">5. Theme File Structure</span></summary>
 
 ---
 
@@ -353,7 +349,7 @@ Custom_Theme_Styles.json
 ```
 
 <details open class="collapsible-section">
-<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="level-1-global-theme-settings">5.3 Level 1: Global Theme Settings</span></summary>
+<summary><span id="level-1-global-theme-settings">5.3 Level 1: Global Theme Settings</span></summary>
 
 Global theme settings are defined at the root level and apply universally across the entire Power BI report.
 
@@ -406,7 +402,7 @@ Text classes define typography styles used throughout the theme. These are part 
 </details>
 
 <details open class="collapsible-section">
-<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="level-2-general-visual-settings">5.4 Level 2: General Visual Settings</span></summary>
+<summary><span id="level-2-general-visual-settings">5.4 Level 2: General Visual Settings</span></summary>
 
 General visual settings apply to **all visuals** and define default behavior. These are defined in `"visualStyles": { "*": { "*": { ... } } }`.
 
@@ -474,7 +470,7 @@ Enable backgrounds for all visuals by default.
 |----------|-------|---------|
 | **show** | true | Display borders |
 | **radius** | 7 | Border corner radius (pixels) |
-| **color** | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#FFFFFF" width="12" height="12" />#FFFFFF | White border color |
+| **color** | <img src="https://placehold.co/12x12/FFFFFF/FFFFFF.png" alt="#FFFFFF" width="12" height="12" />#FFFFFF | White border color |
 
 #### <span id="title-configuration">5.4.5 Title Configuration</span>
 
@@ -624,7 +620,7 @@ Page-level settings (also part of Level 2) apply to report pages themselves:
 </details>
 
 <details open class="collapsible-section">
-<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="level-3-visual-specific-settings">5.5 Level 3: Visual-Specific Settings</span></summary>
+<summary><span id="level-3-visual-specific-settings">5.5 Level 3: Visual-Specific Settings</span></summary>
 
 Each visualization type has its own settings that override general defaults from Level 2:
 
@@ -711,7 +707,7 @@ Each visualization type has its own settings that override general defaults from
 </details>
 
 <details open class="collapsible-section">
-<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="level-4-visual-preset-styles">5.6 Level 4: Visual Preset Styles</span></summary>
+<summary><span id="level-4-visual-preset-styles">5.6 Level 4: Visual Preset Styles</span></summary>
 
 Style presets (the final level) allow different visual appearances for the same chart type within visual-specific settings.
 
@@ -838,7 +834,7 @@ This preset is specific to the **Button slicer** (`advancedSlicerVisual`). It ar
 
 **Characteristics**:
 - Vertical card layout with auto-grid (max 6 tiles)
-- Left accent bar (2px, dark blue-gray <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiMxQzI2MzIiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#1C2632" width="12" height="12" />#1C2632)
+- Left accent bar (2px, dark blue-gray <img src="https://placehold.co/12x12/1C2632/1C2632.png" alt="#1C2632" width="12" height="12" />#1C2632)
 - 10px left margin by default, increasing to 15px on hover (slide-in effect)
 - No background, border, title, subtitle, or divider
 
@@ -895,13 +891,13 @@ This preset is specific to the **Button slicer** (`advancedSlicerVisual`) and is
 **Characteristics**:
 - Horizontal card layout with auto-grid (max 6 tiles)
 - Center-aligned values
-- Bottom accent bar (2px, dark blue-gray <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiMxQzI2MzIiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#1C2632" width="12" height="12" />#1C2632)
+- Bottom accent bar (2px, dark blue-gray <img src="https://placehold.co/12x12/1C2632/1C2632.png" alt="#1C2632" width="12" height="12" />#1C2632)
 - Normal padding by default, 15px bottom margin on hover (drop-down effect)
 - No background, border, title, subtitle, or divider
 
-> **Note**: The button slicer's default settings (`"*"`) also configure multi-select, custom rectangle shape (7px rounded), value/label font colors with selection states (<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiM4NzkzQTMiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#8793A3" width="12" height="12" />#8793A3 default, <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiNGOUY5RjkiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#F9F9F9" width="12" height="12" />#F9F9F9 selected value, <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiNCNkRERUUiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#B6DDEE" width="12" height="12" />#B6DDEE selected label), and a light gray fill (<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiNGMUYyRjQiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#F1F2F4" width="12" height="12" />#F1F2F4).
+> **Note**: The button slicer's default settings (`"*"`) also configure multi-select, custom rectangle shape (7px rounded), value/label font colors with selection states (<img src="https://placehold.co/12x12/8793A3/8793A3.png" alt="#8793A3" width="12" height="12" />#8793A3 default, <img src="https://placehold.co/12x12/F9F9F9/F9F9F9.png" alt="#F9F9F9" width="12" height="12" />#F9F9F9 selected value, <img src="https://placehold.co/12x12/B6DDEE/B6DDEE.png" alt="#B6DDEE" width="12" height="12" />#B6DDEE selected label), and a light gray fill (<img src="https://placehold.co/12x12/F1F2F4/F1F2F4.png" alt="#F1F2F4" width="12" height="12" />#F1F2F4).
 
-<div style="height:1px;border-top:1px dashed #e5e7eb;margin:18px 0;"></div>
+---
 
 </details>
 
@@ -920,7 +916,7 @@ When Power BI renders a visual, settings are applied in this order (later overri
 ---
 
 <details open class="collapsible-section">
-<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="visual-name-reference">6. Visual Name Reference</span></summary>
+<summary><span id="visual-name-reference">6. Visual Name Reference</span></summary>
 
 ---
 
@@ -990,7 +986,7 @@ Use this table to find the correct JSON key name for any Power BI visual when ed
 ---
 
 <details open class="collapsible-section">
-<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="how-to-customize-this-theme">7. How to Customize This Theme</span></summary>
+<summary><span id="how-to-customize-this-theme">7. How to Customize This Theme</span></summary>
 
 ---
 
@@ -1236,7 +1232,7 @@ AI generates:
 ---
 
 <details open class="collapsible-section">
-<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="real-examples-by-visual-type">8. Real Examples by Visual Type</span></summary>
+<summary><span id="real-examples-by-visual-type">8. Real Examples by Visual Type</span></summary>
 
 ---
 
@@ -1518,7 +1514,7 @@ Each example shows the complete, copy-pasteable JSON structure. Place these insi
 ---
 
 <details open class="collapsible-section">
-<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="quick-reference--notes">9. Quick Reference & Notes</span></summary>
+<summary><span id="quick-reference--notes">9. Quick Reference & Notes</span></summary>
 
 ---
 
@@ -1530,21 +1526,21 @@ Each example shows the complete, copy-pasteable JSON structure. Place these insi
 | **Padding** | 10px all sides | Enough breathing room without wasting space |
 | **Value axis** | Hidden | Declutters charts — values are shown via data labels instead |
 | **Responsive layout** | Disabled | Ensures consistent layout across screen sizes and prevents Power BI from auto-resizing elements |
-| **Title font color** | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiM4NzkzQTMiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#8793A3" width="12" height="12" />#8793A3 (gray) | Keeps titles subtle so data stays prominent |
-| **Data label backgrounds** | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiNFNUVFRkYiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#E5EEFF" width="12" height="12" />#E5EEFF (light blue) | Makes labels readable on any bar/line color |
+| **Title font color** | <img src="https://placehold.co/12x12/8793A3/8793A3.png" alt="#8793A3" width="12" height="12" />#8793A3 (gray) | Keeps titles subtle so data stays prominent |
+| **Data label backgrounds** | <img src="https://placehold.co/12x12/E5EEFF/E5EEFF.png" alt="#E5EEFF" width="12" height="12" />#E5EEFF (light blue) | Makes labels readable on any bar/line color |
 
 #### Color Quick Reference
 
 | Use Case | Color | Hex |
 |----------|-------|-----|
-| Primary text | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiMxQzI2MzIiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#1C2632" width="12" height="12" /> Dark Blue-Gray | #1C2632 |
-| Secondary text / titles | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiM4NzkzQTMiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#8793A3" width="12" height="12" /> Medium Gray | #8793A3 |
-| Data labels & axis text | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiM1OTVCNjkiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#595B69" width="12" height="12" /> Dark Gray | #595B69 |
-| Main background | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiNGOUY5RjkiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#F9F9F9" width="12" height="12" /> Near White | #F9F9F9 |
-| Page background | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiNGNkY4RkIiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#F6F8FB" width="12" height="12" /> Light Blue-Gray | #F6F8FB |
-| Table accent | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiM0MjY4NzEiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#426871" width="12" height="12" /> Dark Teal | #426871 |
-| Positive / Good | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiMwOUIzOUQiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#09B39D" width="12" height="12" /> Teal | #09B39D |
-| Negative / Bad | <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHJlY3Qgd2lkdGg9IjExIiBoZWlnaHQ9IjExIiB4PSIwLjUiIHk9IjAuNSIgcng9IjEiIGZpbGw9IiNjMjI1NWMiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+" alt="#c2255c" width="12" height="12" /> Red-Pink | #c2255c |
+| Primary text | <img src="https://placehold.co/12x12/1C2632/1C2632.png" alt="#1C2632" width="12" height="12" /> Dark Blue-Gray | #1C2632 |
+| Secondary text / titles | <img src="https://placehold.co/12x12/8793A3/8793A3.png" alt="#8793A3" width="12" height="12" /> Medium Gray | #8793A3 |
+| Data labels & axis text | <img src="https://placehold.co/12x12/595B69/595B69.png" alt="#595B69" width="12" height="12" /> Dark Gray | #595B69 |
+| Main background | <img src="https://placehold.co/12x12/F9F9F9/F9F9F9.png" alt="#F9F9F9" width="12" height="12" /> Near White | #F9F9F9 |
+| Page background | <img src="https://placehold.co/12x12/F6F8FB/F6F8FB.png" alt="#F6F8FB" width="12" height="12" /> Light Blue-Gray | #F6F8FB |
+| Table accent | <img src="https://placehold.co/12x12/426871/426871.png" alt="#426871" width="12" height="12" /> Dark Teal | #426871 |
+| Positive / Good | <img src="https://placehold.co/12x12/09B39D/09B39D.png" alt="#09B39D" width="12" height="12" /> Teal | #09B39D |
+| Negative / Bad | <img src="https://placehold.co/12x12/c2255c/c2255c.png" alt="#c2255c" width="12" height="12" /> Red-Pink | #c2255c |
 
 #### File Metrics
 
@@ -1568,7 +1564,7 @@ Each example shows the complete, copy-pasteable JSON structure. Place these insi
 ---
 
 <details open class="collapsible-section">
-<summary style="cursor:pointer;margin:10px 0;font-size:16px;font-weight:bold;"><span id="version--references">10. Version & References</span></summary>
+<summary><span id="version--references">10. Version & References</span></summary>
 
 ---
 
