@@ -202,18 +202,18 @@ All text elements use **Calibri** as the primary font family.
 
 | Class | Type | Inherits From | Font Size | Font | Color | Sample | Used In |
 |-------|------|---|-----------|------|-------|--------|----------|
-| **callout** | Primary | - | 11pt | Calibri | <img src="https://placehold.co/12x12/1C2632/1C2632.png" alt="#1C2632" width="12" height="12" />#1C2632 | Sample Text | Card data labels, KPI indicators |
-| **title** | Primary | - | 10pt | Calibri | <img src="https://placehold.co/12x12/1C2632/1C2632.png" alt="#1C2632" width="12" height="12" />#1C2632 | Sample Text | Category/Value axis titles, Multi-row card titles, Slicer headers |
-| **header** | Primary | - | Default | Calibri | <img src="https://placehold.co/12x12/1C2632/1C2632.png" alt="#1C2632" width="12" height="12" />#1C2632 | Sample Text | Key influencers headers |
-| **label** | Primary | - | 10pt | Calibri | <img src="https://placehold.co/12x12/8793A3/8793A3.png" alt="#8793A3" width="12" height="12" />#8793A3 | Sample Text | Table/Matrix column & row headers, grid, values |
-| **boldLabel** | Secondary | label | Inherited | Calibri | Inherited | **Sample Text** | Matrix subtotals, grand totals, Table totals |
-| **semiboldLabel** | Secondary | label | Inherited | Calibri | Inherited | **Sample Text** | Key influencers profile text |
-| **largeLabel** | Secondary | label | 12pt | Inherited | Inherited | Sample Text | Multi-row card data labels |
-| **smallLabel** | Secondary | label | 9pt | Inherited | Inherited | Sample Text | Reference line labels, Slicer input text, Key influencers text |
-| **lightLabel** | Secondary | label | Inherited | Inherited | <img src="https://placehold.co/12x12/595B69/595B69.png" alt="#595B69" width="12" height="12" />#595B69 | Sample Text | Legend text, Button text, Category axis labels, Gauge target |
-| **largeLightLabel** | Secondary | label | 12pt | Inherited | <img src="https://placehold.co/12x12/8793A3/8793A3.png" alt="#8793A3" width="12" height="12" />#8793A3 | Sample Text | Card/Gauge category labels, Multi-row card category labels |
-| **smallLightLabel** | Secondary | label | 9pt | Inherited | <img src="https://placehold.co/12x12/595B69/595B69.png" alt="#595B69" width="12" height="12" />#595B69 | Sample Text | Data labels, Value axis labels |
-| **largeTitle** | Secondary | title | 14pt | Inherited | Inherited | Sample Text | Visual titles |
+| **callout** | Primary | - | 11pt | Calibri | <img src="https://placehold.co/12x12/1C2632/1C2632.png" alt="#1C2632" width="12" height="12" />#1C2632 | <img src="icons/sample-callout.svg" alt="Sample Text - 11pt #1C2632" /> | Card data labels, KPI indicators |
+| **title** | Primary | - | 10pt | Calibri | <img src="https://placehold.co/12x12/1C2632/1C2632.png" alt="#1C2632" width="12" height="12" />#1C2632 | <img src="icons/sample-title.svg" alt="Sample Text - 10pt #1C2632" /> | Category/Value axis titles, Multi-row card titles, Slicer headers |
+| **header** | Primary | - | Default | Calibri | <img src="https://placehold.co/12x12/1C2632/1C2632.png" alt="#1C2632" width="12" height="12" />#1C2632 | <img src="icons/sample-header.svg" alt="Sample Text - 10pt #1C2632" /> | Key influencers headers |
+| **label** | Primary | - | 10pt | Calibri | <img src="https://placehold.co/12x12/8793A3/8793A3.png" alt="#8793A3" width="12" height="12" />#8793A3 | <img src="icons/sample-label.svg" alt="Sample Text - 10pt #8793A3" /> | Table/Matrix column & row headers, grid, values |
+| **boldLabel** | Secondary | label | Inherited | Calibri | Inherited | <img src="icons/sample-boldlabel.svg" alt="Sample Text - 10pt #8793A3 bold" /> | Matrix subtotals, grand totals, Table totals |
+| **semiboldLabel** | Secondary | label | Inherited | Calibri | Inherited | <img src="icons/sample-semiboldlabel.svg" alt="Sample Text - 10pt #8793A3 semibold" /> | Key influencers profile text |
+| **largeLabel** | Secondary | label | 12pt | Inherited | Inherited | <img src="icons/sample-largelabel.svg" alt="Sample Text - 12pt #8793A3" /> | Multi-row card data labels |
+| **smallLabel** | Secondary | label | 9pt | Inherited | Inherited | <img src="icons/sample-smalllabel.svg" alt="Sample Text - 9pt #8793A3" /> | Reference line labels, Slicer input text, Key influencers text |
+| **lightLabel** | Secondary | label | Inherited | Inherited | <img src="https://placehold.co/12x12/595B69/595B69.png" alt="#595B69" width="12" height="12" />#595B69 | <img src="icons/sample-lightlabel.svg" alt="Sample Text - 10pt #595B69" /> | Legend text, Button text, Category axis labels, Gauge target |
+| **largeLightLabel** | Secondary | label | 12pt | Inherited | <img src="https://placehold.co/12x12/8793A3/8793A3.png" alt="#8793A3" width="12" height="12" />#8793A3 | <img src="icons/sample-largelightlabel.svg" alt="Sample Text - 12pt #8793A3" /> | Card/Gauge category labels, Multi-row card category labels |
+| **smallLightLabel** | Secondary | label | 9pt | Inherited | <img src="https://placehold.co/12x12/595B69/595B69.png" alt="#595B69" width="12" height="12" />#595B69 | <img src="icons/sample-smalllightlabel.svg" alt="Sample Text - 9pt #595B69" /> | Data labels, Value axis labels |
+| **largeTitle** | Secondary | title | 14pt | Inherited | Inherited | <img src="icons/sample-largetitle.svg" alt="Sample Text - 14pt #1C2632" /> | Visual titles |
 
 > **Note**: Secondary classes automatically inherit properties from their primary class. Properties shown in the table are explicitly defined in the theme JSON file. For example, `boldLabel` explicitly defines `fontFace: "Calibri"` even though it matches the parent `label` class. Properties not explicitly defined are inherited from the parent class.
 > For complete details on text class usage and formatting options, see [Microsoft Power BI Text Classes Documentation](https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-report-themes#set-formatted-text-defaults).
